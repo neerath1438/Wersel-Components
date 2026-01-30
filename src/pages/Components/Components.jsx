@@ -59,7 +59,7 @@ import {
 import ComponentBlock from './ComponentBlock'
 import './Components.css'
 
-const Components = () => {
+const Components = ({ searchQuery, setSearchQuery }) => {
   const [inputValue, setInputValue] = useState('')
   const [textareaValue, setTextareaValue] = useState('')
   const [dropdownValue, setDropdownValue] = useState('')
@@ -68,7 +68,6 @@ const Components = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [showAlert, setShowAlert] = useState(true)
   const [selectedComponentId, setSelectedComponentId] = useState(null) // null = show all
-  const [searchQuery, setSearchQuery] = useState('')
 
   const dropdownOptions = [
     { value: 'option1', label: 'Option 1' },
@@ -253,7 +252,7 @@ const Components = () => {
             description="Beautiful badge components with glass effects, neon glow, gradients, and more."
             code={{ jsxPath: '../../components/Badge/Badge.jsx', cssPath: '../../components/Badge/Badge.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', borderRadius: '8px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', borderRadius: '8px' }}>
                 <BadgeView />
               </div>
             }
@@ -289,7 +288,7 @@ const Components = () => {
             description="Modern chatbot prompt interface with model selector, file upload, and voice input."
             code={{ jsxPath: '../../components/ChatbotUI/ChatbotUI.jsx', cssPath: '../../components/ChatbotUI/ChatbotUI.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', borderRadius: '8px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', borderRadius: '8px' }}>
                 <ChatbotUIView />
               </div>
             }
@@ -307,7 +306,7 @@ const Components = () => {
             description="Enhanced password input with real-time validation and strength requirements."
             code={{ jsxPath: '../../components/PasswordInput/PasswordInput.jsx', cssPath: '../../components/PasswordInput/PasswordInput.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <PasswordInputView />
               </div>
             }
@@ -343,7 +342,7 @@ const Components = () => {
             description="Vertical tabs with badges, animated pill background, and content switching."
             code={{ jsxPath: '../../components/VerticalTabs/VerticalTabs.jsx', cssPath: '../../components/VerticalTabs/VerticalTabs.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <VerticalTabsView />
               </div>
             }
@@ -361,7 +360,7 @@ const Components = () => {
             description="Stunning 3D carousel with rotating cards, drag interaction, auto-spin, and tilt effects."
             code={{ jsxPath: '../../components/ThreeDCarousel/ThreeDCarousel.jsx', cssPath: '../../components/ThreeDCarousel/ThreeDCarousel.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <ThreeDCarouselView />
               </div>
             }
@@ -379,7 +378,7 @@ const Components = () => {
             description="Interactive file tree with collapsible folders, file type icons, and selection highlighting."
             code={{ jsxPath: '../../components/FileTree/FileTree.jsx', cssPath: '../../components/FileTree/FileTree.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <FileTreeView />
               </div>
             }
@@ -397,7 +396,7 @@ const Components = () => {
             description="Modern accordion component with icons, smooth animations, and FAQ content."
             code={{ jsxPath: '../../components/Accordion/Accordion.jsx', cssPath: '../../components/Accordion/Accordion.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <AccordionView />
               </div>
             }
@@ -415,7 +414,7 @@ const Components = () => {
             description="Interactive 3D card with mouse-tracking tilt, radial glow, dynamic shadow, and parallax depth."
             code={{ jsxPath: '../../components/ThreeDCard/ThreeDCard.jsx', cssPath: '../../components/ThreeDCard/ThreeDCard.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <ThreeDCardView />
               </div>
             }
@@ -433,7 +432,7 @@ const Components = () => {
             description="Modern login form with social authentication (Apple, Google, X), email/password inputs, and password visibility toggle."
             code={{ jsxPath: '../../components/LoginForm/LoginForm.jsx', cssPath: '../../components/LoginForm/LoginForm.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <LoginFormView />
               </div>
             }
@@ -451,7 +450,7 @@ const Components = () => {
             description="Alternative login form design with icon inputs, 'Get Started' button, and social login (Google, Facebook, Apple)."
             code={{ jsxPath: '../../components/LoginForm/LoginForm2.jsx', cssPath: '../../components/LoginForm/LoginForm2.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <LoginForm2View />
               </div>
             }
@@ -469,7 +468,7 @@ const Components = () => {
             description="Split-screen login form with gradient sidebar, shield icon, social login (Google, Twitter), and 'Keep me signed in' checkbox."
             code={{ jsxPath: '../../components/LoginForm/LoginForm3.jsx', cssPath: '../../components/LoginForm/LoginForm3.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <LoginForm3View />
               </div>
             }
@@ -487,7 +486,7 @@ const Components = () => {
             description="Brutalist minimalist sign up form with full name/email/password inputs, terms checkbox, and social login (GitHub, Google)."
             code={{ jsxPath: '../../components/SignUpForm/SignUpForm.jsx', cssPath: '../../components/SignUpForm/SignUpForm.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <SignUpFormView />
               </div>
             }
@@ -505,7 +504,7 @@ const Components = () => {
             description="3-step wizard form with progress bar, step navigation, animations, and review screen before submission."
             code={{ jsxPath: '../../components/MultiStepForm/MultiStepForm.jsx', cssPath: '../../components/MultiStepForm/MultiStepForm.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <MultiStepFormView />
               </div>
             }
@@ -523,7 +522,7 @@ const Components = () => {
             description="OTP verification component with 5-digit input, auto-focus navigation, paste support, and macOS window controls."
             code={{ jsxPath: '../../components/TwoStepVerification/TwoStepVerification.jsx', cssPath: '../../components/TwoStepVerification/TwoStepVerification.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <TwoStepVerificationView />
               </div>
             }
@@ -541,7 +540,7 @@ const Components = () => {
             description="Framework multi-select dropdown with search, keyboard navigation (arrows, enter, escape, backspace), and animated popover."
             code={{ jsxPath: '../../components/MultiSelect/MultiSelect.jsx', cssPath: '../../components/MultiSelect/MultiSelect.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <MultiSelectView />
               </div>
             }
@@ -559,7 +558,7 @@ const Components = () => {
             description="A category-based multi-select with icons, descriptions, and item counts for a richer selection experience."
             code={{ jsxPath: '../../components/CategoryMultiSelect/CategoryMultiSelect.jsx', cssPath: '../../components/CategoryMultiSelect/CategoryMultiSelect.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <CategoryMultiSelectView />
               </div>
             }
@@ -577,7 +576,7 @@ const Components = () => {
             description="A responsive NFT marketplace grid with countdown timers, price badges, and 'like' functionality."
             code={{ jsxPath: '../../components/NftMarketplace/NftMarketplace.jsx', cssPath: '../../components/NftMarketplace/NftMarketplace.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <NftMarketplaceView />
               </div>
             }
@@ -595,7 +594,7 @@ const Components = () => {
             description="A Pinterest-style Masonry grid layout using CSS columns, featuring hover animations and smooth item reveals."
             code={{ jsxPath: '../../components/MasonryGrid/MasonryGrid.jsx', cssPath: '../../components/MasonryGrid/MasonryGrid.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <MasonryGridView />
               </div>
             }
@@ -613,7 +612,7 @@ const Components = () => {
             description="A clean, black and white minimalist hero section with navigation, feature list, and stats section."
             code={{ jsxPath: '../../components/Hero/Hero3.jsx', cssPath: '../../components/Hero/Hero3.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <Hero3View />
               </div>
             }
@@ -631,7 +630,7 @@ const Components = () => {
             description="Modern, responsive navigation header with sticky blur effect, search, and subscribe functionality."
             code={{ jsxPath: '../../components/BlogHeader/BlogHeader.jsx', cssPath: '../../components/BlogHeader/BlogHeader.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0', background: '#f8f9fa', borderRadius: '8px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0', background: '#f8f9fa', borderRadius: '8px' }}>
                 <BlogHeaderView />
               </div>
             }
@@ -710,7 +709,7 @@ const Components = () => {
             description="Interactive animated toggle switches and theme switchers."
             code={{ jsxPath: '../../components/ThemeSwitch/ThemeSwitch.jsx', cssPath: '../../components/ThemeSwitch/ThemeSwitch.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem' }}>
+              <div className="wui-showcase-bay">
                 <ThemeSwitchView />
               </div>
             }
@@ -785,7 +784,7 @@ const Components = () => {
             description="Selection of modern, animated loaders including spins, pulses, ripples, and more."
             code={{ jsxPath: '../../components/Loader/EnhancedLoaders.jsx', cssPath: '../../components/Loader/EnhancedLoaders.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0' }}>
                 <LoaderView />
               </div>
             }
@@ -803,7 +802,7 @@ const Components = () => {
             description="Infinite marquee scroller for SVG logos."
             code={{ jsxPath: '../../components/LogoMarquee/LogoMarquee.jsx', cssPath: '../../components/LogoMarquee/LogoMarquee.css' }}
             preview={
-              <div className="component-showcase" style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px' }}>
+              <div className="wui-showcase-bay" style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px' }}>
                 <LogoMarquee />
               </div>
             }
@@ -840,7 +839,7 @@ const Components = () => {
             description="Spider web graph with hover glow and spokes."
             code={{ jsxPath: '../../components/ReactSpider/ReactSpider.jsx', cssPath: '../../components/ReactSpider/ReactSpider.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa' }}>
                 <ReactSpider />
               </div>
             }
@@ -858,7 +857,7 @@ const Components = () => {
             description="Auto-rotating nexus network with particles."
             code={{ jsxPath: '../../components/ReactNexusOrbSup/ReactNexusOrbSup.jsx', cssPath: '../../components/ReactNexusOrbSup/ReactNexusOrbSup.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa' }}>
                 <ReactNexusOrbSup />
               </div>
             }
@@ -890,7 +889,7 @@ const Components = () => {
             description="Avatar rings + animated random connections (framer-motion)."
             code={{ jsxPath: '../../components/ReactNetworkVisualization/ReactNetworkVisualization.jsx', cssPath: '../../components/ReactNetworkVisualization/ReactNetworkVisualization.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '500px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '500px' }}>
                 <ReactNetworkVisualization />
               </div>
             }
@@ -908,7 +907,7 @@ const Components = () => {
             description="Swipeable 3D card stack with pointer/touch support."
             code={{ jsxPath: '../../components/ReactImageSwiper/ReactImageSwiper.jsx', cssPath: '../../components/ReactImageSwiper/ReactImageSwiper.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#1a1a1a', minHeight: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#1a1a1a', minHeight: '450px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ReactImageSwiper />
               </div>
             }
@@ -927,7 +926,7 @@ const Components = () => {
             description="Glassmorphism profile card with GlitchVault glow interaction."
             code={{ jsxPath: '../../components/ProfileCard/ProfileCard.jsx', cssPath: '../../components/ProfileCard/ProfileCard.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ProfileCard />
               </div>
             }
@@ -945,7 +944,7 @@ const Components = () => {
             description="Project status card with GlitchVault effects, ideal for deployment notifications."
             code={{ jsxPath: '../../components/ProjectCard/ProjectCard.jsx', cssPath: '../../components/ProjectCard/ProjectCard.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <ProjectCard />
               </div>
             }
@@ -963,7 +962,7 @@ const Components = () => {
             description="Animated glow line component with multiple color schemes and orientations."
             code={{ jsxPath: '../../components/GlowLine/GlowLine.jsx', cssPath: '../../components/GlowLine/GlowLine.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#0f172a', minHeight: '400px', position: 'relative', overflow: 'hidden' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#0f172a', minHeight: '400px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'relative', width: '100%', height: '100%', minHeight: '300px' }}>
                   <GlowLine orientation="horizontal" position="20%" color="purple" />
                   <GlowLine orientation="horizontal" position="40%" color="blue" />
@@ -993,7 +992,7 @@ const Components = () => {
             description="Animated orbiting skill icons with glow effects and hover interactions."
             code={{ jsxPath: '../../components/OrbitingSkills/OrbitingSkills.jsx', cssPath: '../../components/OrbitingSkills/OrbitingSkills.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#0f172a', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#0f172a', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <OrbitingSkills />
               </div>
             }
@@ -1011,7 +1010,7 @@ const Components = () => {
             description="Interactive orbiting carousel with profile cards, keyboard navigation, and smooth animations."
             code={{ jsxPath: '../../components/OrbitingCarousel/OrbitingCarousel.jsx', cssPath: '../../components/OrbitingCarousel/OrbitingCarousel.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <OrbitingCarousel />
               </div>
             }
@@ -1029,7 +1028,7 @@ const Components = () => {
             description="Expandable professional timeline with skills, responsibilities, and accessible accordion behavior."
             code={{ jsxPath: '../../components/SimpleTimeline/SimpleTimeline.jsx', cssPath: '../../components/SimpleTimeline/SimpleTimeline.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '520px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa', minHeight: '520px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <SimpleTimeline />
               </div>
             }
@@ -1047,7 +1046,7 @@ const Components = () => {
             description="Horizontal menu with smooth expanding hover effect."
             code={{ jsxPath: '../../components/ExpandingMenu/ExpandingMenu.jsx', cssPath: '../../components/ExpandingMenu/ExpandingMenu.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
                 <ExpandingMenu />
               </div>
             }
@@ -1065,7 +1064,7 @@ const Components = () => {
             description="Professional card design for job listings with salary, title, and company logo."
             code={{ jsxPath: '../../components/JobCard/JobCard.jsx', cssPath: '../../components/JobCard/JobCard.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: '#f1f5f9', borderRadius: '12px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: '#f1f5f9', borderRadius: '12px' }}>
                 <JobCard />
               </div>
             }
@@ -1083,7 +1082,7 @@ const Components = () => {
             description="Modern login form with soft blue gradient, social login options, and subtle animations."
             code={{ jsxPath: '../../components/LoginForm/LoginForm4.jsx', cssPath: '../../components/LoginForm/LoginForm4.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
                 <LoginForm4 />
               </div>
             }
@@ -1101,7 +1100,7 @@ const Components = () => {
             description="Premium code-styled developer profile with file system aesthetics, syntax highlighting, and glowing atmospheric effects."
             code={{ jsxPath: '../../components/CodeProfile/CodeProfile.jsx', cssPath: '../../components/CodeProfile/CodeProfile.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: '#09090b', borderRadius: '12px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: '#09090b', borderRadius: '12px' }}>
                 <CodeProfile />
               </div>
             }
@@ -1235,17 +1234,10 @@ const Components = () => {
     <div className="wui-showcase-page">
       <div className="wui-showcase-shell">
         <aside className="wui-showcase-orbit" aria-label="UI Components Menu">
-          <div className="wui-showcase-crown">
-            <span>UI Components</span>
-          </div>
-          <div className="wui-showcase-search">
-            <input
-              type="text"
-              placeholder="Search components..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="wui-showcase-portal"
-            />
+          <div className="wui-showcase-orbit-head">
+            <div className="wui-showcase-crown">
+              <span>UI Components</span>
+            </div>
           </div>
           <nav className="wui-showcase-stack">
             <button
