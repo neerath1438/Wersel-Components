@@ -3,6 +3,7 @@ import "./LoaderView.css";
 
 const LoaderView = () => {
     const loaderItems = [
+        { name: "Running Hamster", component: <Loaders.HamsterLoader /> },
         { name: "Classic Spin", component: <Loaders.ClassicSpin /> },
         { name: "Dots Bounce", component: <Loaders.DotsBounce /> },
         { name: "Pulse", component: <Loaders.PulseLoader /> },
