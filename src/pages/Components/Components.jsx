@@ -49,7 +49,11 @@ import {
   MasonryGridView,
   Hero3View,
   BlogHeaderView,
-  BackgroundView
+  BackgroundView,
+  ThemeSwitchView,
+  ExpandingMenu,
+  JobCard,
+  LoginForm4
 } from '../../components'
 import ComponentBlock from './ComponentBlock'
 import './Components.css'
@@ -695,6 +699,24 @@ const Components = () => {
         )
       },
       {
+        id: 'toggle-switches',
+        menuLabel: 'Toggle Switches',
+        title: 'Toggle Switches',
+        badge: 'New',
+        render: () => (
+          <ComponentBlock
+            title="Toggle Switches"
+            description="Interactive animated toggle switches and theme switchers."
+            code={{ jsxPath: '../../components/ThemeSwitch/ThemeSwitch.jsx', cssPath: '../../components/ThemeSwitch/ThemeSwitch.css' }}
+            preview={
+              <div className="component-showcase" style={{ padding: '2rem' }}>
+                <ThemeSwitchView />
+              </div>
+            }
+          />
+        )
+      },
+      {
         id: 'modal',
         menuLabel: 'Modal Dialog',
         title: 'Modal',
@@ -798,13 +820,14 @@ const Components = () => {
             description="Center + orbit icons with hover highlight."
             code={{ jsxPath: '../../components/ReactOrbit/ReactOrbit.jsx', cssPath: '../../components/ReactOrbit/ReactOrbit.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', borderRadius: '8px', background: '#f8f9fa' }}>
+              <div className="component-showcase">
                 <ReactOrbit />
               </div>
             }
           />
         )
       },
+
       {
         id: 'orbiting-spider',
         menuLabel: 'Orbiting Skills',
@@ -1011,6 +1034,60 @@ const Components = () => {
             }
           />
         )
+      },
+      {
+        id: 'expanding-menu',
+        menuLabel: 'Expanding Menu',
+        title: 'Expanding Menu',
+        badge: 'New',
+        render: () => (
+          <ComponentBlock
+            title="Expanding Menu"
+            description="Horizontal menu with smooth expanding hover effect."
+            code={{ jsxPath: '../../components/ExpandingMenu/ExpandingMenu.jsx', cssPath: '../../components/ExpandingMenu/ExpandingMenu.css' }}
+            preview={
+              <div className="component-showcase" style={{ padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
+                <ExpandingMenu />
+              </div>
+            }
+          />
+        )
+      },
+      {
+        id: 'job-card',
+        menuLabel: 'Job Card',
+        title: 'Job Posting Card',
+        badge: 'New',
+        render: () => (
+          <ComponentBlock
+            title="Job Posting Card"
+            description="Professional card design for job listings with salary, title, and company logo."
+            code={{ jsxPath: '../../components/JobCard/JobCard.jsx', cssPath: '../../components/JobCard/JobCard.css' }}
+            preview={
+              <div className="component-showcase" style={{ padding: '2rem', background: '#f1f5f9', borderRadius: '12px' }}>
+                <JobCard />
+              </div>
+            }
+          />
+        )
+      },
+      {
+        id: 'login-form-4',
+        menuLabel: 'Login Form 4',
+        title: 'Soft Blue Login Form',
+        badge: 'New',
+        render: () => (
+          <ComponentBlock
+            title="Soft Blue Login Form"
+            description="Modern login form with soft blue gradient, social login options, and subtle animations."
+            code={{ jsxPath: '../../components/LoginForm/LoginForm4.jsx', cssPath: '../../components/LoginForm/LoginForm4.css' }}
+            preview={
+              <div className="component-showcase" style={{ padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
+                <LoginForm4 />
+              </div>
+            }
+          />
+        )
       }
     ]
   }, [
@@ -1029,14 +1106,14 @@ const Components = () => {
     {
       title: 'Input Controls',
       items: sections.filter(s =>
-        ['buttons', 'glow-buttons', 'inputs', 'textarea', 'dropdown', 'checkbox', 'radio', 'password-input', 'multiselect', 'category-multiselect'].includes(s.id) ||
+        ['buttons', 'glow-buttons', 'inputs', 'textarea', 'dropdown', 'checkbox', 'radio', 'toggle-switches', 'password-input', 'multiselect', 'category-multiselect'].includes(s.id) ||
         s.id.includes('form') || s.id.includes('verification')
       )
     },
     {
       title: 'Navigational Components',
       items: sections.filter(s =>
-        ['expanded-tabs', 'vertical-tabs', 'file-tree', 'blog-header', 'hero-3', 'orbiting-carousel'].includes(s.id)
+        ['expanded-tabs', 'vertical-tabs', 'file-tree', 'blog-header', 'hero-3', 'orbiting-carousel', 'expanding-menu'].includes(s.id)
       )
     },
     {
@@ -1049,7 +1126,7 @@ const Components = () => {
     {
       title: 'Containers/Structural Components',
       items: sections.filter(s =>
-        ['modal', 'accordion', '3d-card', '3d-carousel', 'user-profile-dropdown', 'image-swiper', 'glitch-vault-card', 'project-card', 'nft-marketplace', 'masonry-grid', 'chatbot-ui'].includes(s.id)
+        ['modal', 'accordion', '3d-card', '3d-carousel', 'user-profile-dropdown', 'image-swiper', 'glitch-vault-card', 'project-card', 'nft-marketplace', 'masonry-grid', 'chatbot-ui', 'job-card'].includes(s.id)
       )
     }
   ], [sections])
