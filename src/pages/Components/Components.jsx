@@ -63,6 +63,7 @@ const Components = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [showAlert, setShowAlert] = useState(true)
   const [selectedComponentId, setSelectedComponentId] = useState(null) // null = show all
+  const [searchQuery, setSearchQuery] = useState('')
 
   const dropdownOptions = [
     { value: 'option1', label: 'Option 1' },
@@ -1023,13 +1024,116 @@ const Components = () => {
     textareaValue
   ])
 
+  // Restructured categories
+  const categories = useMemo(() => [
+    {
+      title: 'Input Controls',
+      items: sections.filter(s =>
+        ['buttons', 'glow-buttons', 'inputs', 'textarea', 'dropdown', 'checkbox', 'radio', 'password-input', 'multiselect', 'category-multiselect'].includes(s.id) ||
+        s.id.includes('form') || s.id.includes('verification')
+      )
+    },
+    {
+      title: 'Navigational Components',
+      items: sections.filter(s =>
+        ['expanded-tabs', 'vertical-tabs', 'file-tree', 'blog-header', 'hero-3', 'orbiting-carousel'].includes(s.id)
+      )
+    },
+    {
+      title: 'Informational Components',
+      items: sections.filter(s =>
+        ['badges', 'toast-notifications', 'loaders', 'simple-timeline', 'glow-line', 'orbiting-skills', 'orbiting-circles', 'marquee-scroller', 'network-visualization', 'orbiting-spider', 'nexus-orb-sup', 'backgrounds'].includes(s.id) ||
+        s.id === 'alerts'
+      )
+    },
+    {
+      title: 'Containers/Structural Components',
+      items: sections.filter(s =>
+        ['modal', 'accordion', '3d-card', '3d-carousel', 'user-profile-dropdown', 'image-swiper', 'glitch-vault-card', 'project-card', 'nft-marketplace', 'masonry-grid', 'chatbot-ui'].includes(s.id)
+      )
+    }
+  ], [sections])
+
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) return categories
+
+    const query = searchQuery.toLowerCase().trim()
+
+    // Genius mapping for synonyms
+    const synonyms = {
+      'text': ['input', 'textarea', 'typography'],
+      'box': ['input', 'checkbox', 'radio', 'container', 'card'],
+      'choose': ['select', 'dropdown', 'radio', 'checkbox'],
+      'pick': ['select', 'dropdown', 'date'],
+      'loading': ['loader', 'spinner', 'wait'],
+      'spin': ['loader', 'spinner'],
+      'image': ['avatar', 'img', 'picture', 'gallery', 'carousel'],
+      'pic': ['avatar', 'img', 'picture'],
+      'nav': ['header', 'menu', 'sidebar', 'tabs'],
+      'navigation': ['header', 'menu', 'sidebar', 'tabs'],
+      'foot': ['footer'],
+      'login': ['auth', 'sign in', 'form'],
+      'signup': ['auth', 'register', 'form', 'sign up'],
+      'register': ['auth', 'signup', 'form'],
+      'authentication': ['login', 'signup', 'auth', 'form'],
+      'msg': ['toast', 'alert', 'notification', 'message'],
+      'popup': ['modal', 'dialog', 'toast', 'alert'],
+      'notify': ['toast', 'alert', 'notification'],
+      'switch': ['toggle', 'checkbox'],
+      'tick': ['checkbox'],
+      'option': ['radio', 'select', 'dropdown'],
+      'list': ['menu', 'dropdown', 'table', 'tree'],
+      'ask': ['chatbot', 'ai', 'prompt'],
+      'bot': ['chatbot', 'ai'],
+      'faq': ['accordion'],
+      'collapse': ['accordion'],
+      'expand': ['accordion'],
+      'pass': ['password', 'input', 'auth'],
+      'hero': ['header', 'landing', 'banner'],
+      'grid': ['masonry', 'layout', 'gallery'],
+      '3d': ['three', 'card', 'carousel'],
+      'move': ['animation', 'motion', 'drag'],
+      'anim': ['animation', 'motion', 'transition'],
+      'step': ['multistep', 'wizard', 'progress'],
+      'verify': ['otp', 'code', 'auth'],
+      'badge': ['tag', 'label', 'pill'],
+      'shop': ['nft', 'marketplace', 'commerce', 'product'],
+      'money': ['nft', 'price', 'commerce'],
+    }
+
+    // Expand query with synonyms
+    let expandedQueryTerms = [query]
+    Object.keys(synonyms).forEach(key => {
+      if (query.includes(key)) {
+        expandedQueryTerms = [...expandedQueryTerms, ...synonyms[key]]
+      }
+    })
+
+    return categories.map(cat => ({
+      ...cat,
+      items: cat.items.filter(section => {
+        const searchContent = `
+          ${section.title.toLowerCase()} 
+          ${section.menuLabel.toLowerCase()} 
+          ${section.description ? section.description.toLowerCase() : ''} 
+          ${section.badge ? section.badge.toLowerCase() : ''}
+        `
+        return expandedQueryTerms.some(term => searchContent.includes(term))
+      })
+    })).filter(cat => cat.items.length > 0)
+  }, [searchQuery, categories])
+
+  const visibleItems = useMemo(() => {
+    if (selectedComponentId) {
+      const section = sections.find(s => s.id === selectedComponentId)
+      return section ? [{ title: section.title, items: [section] }] : []
+    }
+    return filteredCategories
+  }, [selectedComponentId, filteredCategories, sections])
+
   const handleComponentClick = (id) => {
     setSelectedComponentId(id === selectedComponentId ? null : id) // Toggle: click again to show all
   }
-
-  const visibleSections = selectedComponentId
-    ? sections.filter((s) => s.id === selectedComponentId)
-    : sections
 
   return (
     <div className="components-page">
@@ -1037,6 +1141,15 @@ const Components = () => {
         <aside className="components-sidebar" aria-label="UI Components Menu">
           <div className="sidebar-title">
             <span>UI Components</span>
+          </div>
+          <div className="sidebar-search">
+            <input
+              type="text"
+              placeholder="Search components..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="sidebar-search-input"
+            />
           </div>
           <nav className="sidebar-nav">
             <button
@@ -1047,21 +1160,27 @@ const Components = () => {
               <span className="sidebar-dot" aria-hidden="true"></span>
               <span className="sidebar-label">Show All</span>
             </button>
-            {sections.map((s) => {
-              const isActive = selectedComponentId === s.id
-              return (
-                <button
-                  key={s.id}
-                  type="button"
-                  className={`sidebar-item ${isActive ? 'active' : ''}`}
-                  onClick={() => handleComponentClick(s.id)}
-                >
-                  <span className="sidebar-dot" aria-hidden="true"></span>
-                  <span className="sidebar-label">{s.menuLabel}</span>
-                  {s.badge && <span className="sidebar-badge">{s.badge}</span>}
-                </button>
-              )
-            })}
+
+            {filteredCategories.map((category, index) => (
+              <div key={index} className="sidebar-category">
+                <h5 className="sidebar-category-title">{category.title}</h5>
+                {category.items.map((s) => {
+                  const isActive = selectedComponentId === s.id
+                  return (
+                    <button
+                      key={s.id}
+                      type="button"
+                      className={`sidebar-item ${isActive ? 'active' : ''}`}
+                      onClick={() => handleComponentClick(s.id)}
+                    >
+                      <span className="sidebar-dot" aria-hidden="true"></span>
+                      <span className="sidebar-label">{s.menuLabel}</span>
+                      {s.badge && <span className="sidebar-badge">{s.badge}</span>}
+                    </button>
+                  )
+                })}
+              </div>
+            ))}
           </nav>
         </aside>
 
@@ -1074,14 +1193,14 @@ const Components = () => {
                 : 'All reusable components for your website'}
             </p>
 
-            {visibleSections.length === 0 ? (
+            {visibleItems.length === 0 ? (
               <div style={{ padding: '2rem', textAlign: 'center', color: '#666' }}>
                 <p>No component selected</p>
               </div>
             ) : (
-              visibleSections.map((s) => (
+              visibleItems.flatMap(cat => cat.items).map((s) => (
                 <section key={s.id} id={s.id} className="ui-section">
-                  <Card title={s.title}>{s.render()}</Card>
+                  {s.render()}
                 </section>
               ))
             )}
@@ -1093,4 +1212,3 @@ const Components = () => {
 }
 
 export default Components
-

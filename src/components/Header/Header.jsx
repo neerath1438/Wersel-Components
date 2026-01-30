@@ -8,11 +8,6 @@ const Header = () => {
         <Link to="/" className="logo">
           Wersel-Workdesk
         </Link>
-        <nav className="nav">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/components" className="nav-link">Components</Link>
-          <Link to="/about" className="nav-link">About</Link>
-        </nav>
       </div>
     </header>
   )
