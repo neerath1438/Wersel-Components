@@ -1,0 +1,36 @@
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container {
+  padding: 2rem;
+}
+
+.about h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.structure-list,
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.structure-list li,
+.features-list li {
+  padding: 0.5rem 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.structure-list li:last-child,
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.structure-list strong {
+  color: #2c3e50;
+}
+

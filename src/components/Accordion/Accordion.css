@@ -1,0 +1,133 @@
+.accordion-container {
+    width: 100%;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.accordion-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.accordion-list {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+/* Accordion Item */
+.accordion-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: #f9fafb;
+}
+
+.accordion-header:focus {
+    outline: none;
+}
+
+.accordion-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.accordion-header-content svg {
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.accordion-question {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.accordion-chevron {
+    color: #6b7280;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.accordion-chevron.open {
+    transform: rotate(180deg);
+}
+
+/* Accordion Content */
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.accordion-content.open {
+    max-height: 24rem;
+}
+
+.accordion-answer {
+    padding: 1rem;
+    padding-left: 3rem;
+}
+
+.accordion-answer p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .accordion-title {
+        color: #f9fafb;
+    }
+
+    .accordion-list {
+        border-color: #374151;
+    }
+
+    .accordion-item {
+        border-color: #374151;
+    }
+
+    .accordion-header:hover {
+        background-color: #1f2937;
+    }
+
+    .accordion-header-content svg {
+        color: #9ca3af;
+    }
+
+    .accordion-question {
+        color: #e5e7eb;
+    }
+
+    .accordion-chevron {
+        color: #9ca3af;
+    }
+
+    .accordion-answer p {
+        color: #d1d5db;
+    }
+}

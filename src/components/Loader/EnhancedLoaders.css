@@ -1,0 +1,499 @@
+/* Base Colors */
+:root {
+    --loader-color: #ea580c;
+    /* orange-600 */
+}
+
+/* 1. Classic Spin */
+.classic-spin {
+    animation: spin 1s linear infinite;
+    height: 2rem;
+    width: 2rem;
+    color: var(--loader-color);
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+/* 2. Dots Bounce */
+.dots-bounce {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.dots-bounce .dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--loader-color);
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.dots-bounce .dot:nth-child(1) {
+    animation-delay: -0.3s;
+}
+
+.dots-bounce .dot:nth-child(2) {
+    animation-delay: -0.15s;
+}
+
+/* 3. Pulse Loader */
+.pulse-loader {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--loader-color);
+    border-radius: 50%;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 4. Ring Loader */
+.ring-loader {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 4px solid #fed7aa;
+    /* orange-200 */
+    border-top-color: var(--loader-color);
+    animation: spin 1s linear infinite;
+}
+
+/* 5. Bars Loader */
+.bars-loader {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.bars-loader .bar {
+    width: 0.5rem;
+    height: 1.5rem;
+    background-color: var(--loader-color);
+    border-radius: 0.25rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.bars-loader .bar:nth-child(1) {
+    animation-delay: -0.3s;
+}
+
+.bars-loader .bar:nth-child(2) {
+    animation-delay: -0.15s;
+}
+
+/* 6. Dual Ring Loader */
+.dual-ring-loader {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 4px solid var(--loader-color);
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+/* 7. Ripple Loader */
+.ripple-loader {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.ripple-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--loader-color);
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    opacity: 0.75;
+}
+
+.ripple-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--loader-color);
+}
+
+/* 8. Ping Dots */
+.ping-dots-loader {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+.ping-dots-loader .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--loader-color);
+    border-radius: 50%;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.ping-dots-loader .dot:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.ping-dots-loader .dot:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* 9. Grid Loader */
+.grid-loader {
+    display: grid;
+    grid-template-cols: repeat(3, 1fr);
+    gap: 0.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.grid-loader .cell {
+    background-color: var(--loader-color);
+    border-radius: 0.125rem;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.grid-loader .cell:nth-child(1) {
+    animation-delay: -0.6s;
+}
+
+.grid-loader .cell:nth-child(2),
+.grid-loader .cell:nth-child(4) {
+    animation-delay: -0.45s;
+}
+
+.grid-loader .cell:nth-child(3),
+.grid-loader .cell:nth-child(5),
+.grid-loader .cell:nth-child(7) {
+    animation-delay: -0.3s;
+}
+
+.grid-loader .cell:nth-child(6),
+.grid-loader .cell:nth-child(8) {
+    animation-delay: -0.15s;
+}
+
+/* 10. Three Dots Scale */
+.three-dots-scale {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.three-dots-scale .dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--loader-color);
+    border-radius: 50%;
+    animation: pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.three-dots-scale .dot:nth-child(1) {
+    animation-delay: -0.3s;
+}
+
+.three-dots-scale .dot:nth-child(2) {
+    animation-delay: -0.15s;
+}
+
+/* 11. Square Spin */
+.square-spin {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--loader-color);
+    border-radius: 0.125rem;
+    animation: spin 1s linear infinite;
+}
+
+/* 17. Hourglass */
+.hourglass-loader {
+    animation: spin 1s linear infinite;
+    height: 2rem;
+    width: 2rem;
+    color: var(--loader-color);
+}
+
+/* SMIL Loaders Base */
+.smil-loader {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--loader-color);
+}
+
+.smil-loader svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 12. Rotating Dots */
+.rotating-dots {
+    animation: spin 1.5s linear infinite;
+    height: 2rem;
+    width: 2rem;
+    color: var(--loader-color);
+}
+
+/* 13. Wave Loader */
+.wave-loader {
+    display: flex;
+    gap: 0.125rem;
+    align-items: flex-end;
+    height: 2rem;
+}
+
+.wave-loader .bar {
+    width: 0.375rem;
+    background-color: var(--loader-color);
+    border-radius: 9999px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.wave-loader .bar:nth-child(1) {
+    height: 2rem;
+    animation-delay: -0.6s;
+}
+
+.wave-loader .bar:nth-child(2) {
+    height: 1.5rem;
+    animation-delay: -0.5s;
+}
+
+.wave-loader .bar:nth-child(3) {
+    height: 1rem;
+    animation-delay: -0.4s;
+}
+
+.wave-loader .bar:nth-child(4) {
+    height: 0.5rem;
+    animation-delay: -0.3s;
+}
+
+.wave-loader .bar:nth-child(5) {
+    height: 1rem;
+    animation-delay: -0.2s;
+}
+
+.wave-loader .bar:nth-child(6) {
+    height: 1.5rem;
+    animation-delay: -0.1s;
+}
+
+.wave-loader .bar:nth-child(7) {
+    height: 2rem;
+}
+
+/* 14. Folding Cube (Ping variation) */
+.folding-cube {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(45deg);
+}
+
+.folding-cube .cube {
+    position: absolute;
+    width: 0.875rem;
+    height: 0.875rem;
+    background-color: var(--loader-color);
+    animation: ping 1.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.folding-cube .top-left {
+    top: 0;
+    left: 0;
+}
+
+.folding-cube .top-right {
+    top: 0;
+    right: 0;
+    animation-delay: 0.15s;
+}
+
+.folding-cube .bottom-right {
+    bottom: 0;
+    right: 0;
+    animation-delay: 0.3s;
+}
+
+.folding-cube .bottom-left {
+    bottom: 0;
+    left: 0;
+    animation-delay: 0.45s;
+}
+
+/* 15. Heart Beat */
+.heart-beat {
+    width: 2rem;
+    height: 2rem;
+    color: var(--loader-color);
+    animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 16. Clock Loader */
+.clock-loader {
+    width: 2rem;
+    height: 2rem;
+    color: var(--loader-color);
+}
+
+.clock-loader .minute {
+    animation: spin 2s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+.clock-loader .hour {
+    animation: spin 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+/* Animations */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Batch 4 Loaders */
+
+/* Pulsing Grid */
+.pulsing-grid-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulsing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.pulse-cell {
+    background-color: var(--loader-color);
+    border-radius: 0.125rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Ripple Pings */
+.ripple-pings {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ping-outer,
+.ping-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--loader-color);
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.ping-inner {
+    animation-delay: 0.4s;
+    opacity: 0.5;
+}
+
+.ping-core {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--loader-color);
+}
+
+/* Square Chase */
+.square-chase {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.chase-square {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--loader-color);
+    border-radius: 0.125rem;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Flex Bounce Dots */
+.flex-bounce-dots {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    height: 2rem;
+}
+
+.flex-bounce-dots span {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--loader-color);
+    border-radius: 50%;
+    animation: bounce 0.6s infinite alternate;
+}
+
+/* Flower Spin */
+.flower-spin-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--loader-color);
+}
+
+.flower-path {
+    transform-origin: center;
+    animation: spin 1.5s linear infinite;
+}
