@@ -4,16 +4,16 @@ import './Accordion.css';
 
 const AccordionItem = ({ item, isOpen, onToggle }) => {
     return (
-        <div className="accordion-item">
-            <button className="accordion-header" onClick={onToggle}>
-                <div className="accordion-header-content">
+        <div className="wui-layer-brick">
+            <button className="wui-layer-trigger" onClick={onToggle}>
+                <div className="wui-layer-intent">
                     {item.icon}
-                    <span className="accordion-question">{item.question}</span>
+                    <span className="wui-layer-voice">{item.question}</span>
                 </div>
-                <ChevronDown size={20} className={`accordion-chevron ${isOpen ? 'open' : ''}`} />
+                <ChevronDown size={20} className={`wui-layer-dial ${isOpen ? 'open' : ''}`} />
             </button>
-            <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
-                <div className="accordion-answer">
+            <div className={`wui-layer-depth ${isOpen ? 'open' : ''}`}>
+                <div className="wui-layer-well">
                     <p>{item.answer}</p>
                 </div>
             </div>
@@ -29,9 +29,9 @@ const Accordion = ({ data, defaultOpen = null }) => {
     };
 
     return (
-        <div className="accordion-container">
-            <h1 className="accordion-title">General Questions</h1>
-            <div className="accordion-list">
+        <div className="wui-layer-stage">
+            <h1 className="wui-layer-crown">General Questions</h1>
+            <div className="wui-layer-stack">
                 {data.map((item, index) => (
                     <AccordionItem
                         key={index}

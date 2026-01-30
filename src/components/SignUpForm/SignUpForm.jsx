@@ -69,16 +69,16 @@ const SignUpForm = () => {
     };
 
     return (
-        <div className="signup-wrapper">
-            <div className="signup-container">
-                <form className="signup-form" onSubmit={handleSubmit}>
+        <div className="wui-chamber-bay">
+            <div className="wui-chamber-well">
+                <form className="wui-chamber-core" onSubmit={handleSubmit}>
                     {/* Full Name */}
-                    <div className="signup-field">
-                        <label htmlFor="fullName" className="signup-label">
+                    <div className="wui-chamber-field">
+                        <label htmlFor="fullName" className="wui-chamber-intent">
                             Full Name
                         </label>
-                        <div className="signup-input-wrapper">
-                            <div className="signup-input-icon">
+                        <div className="wui-chamber-portal-wrapper">
+                            <div className="wui-portal-atom">
                                 <UserIcon />
                             </div>
                             <input
@@ -87,18 +87,18 @@ const SignUpForm = () => {
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
                                 placeholder="Enter your full name"
-                                className="signup-input"
+                                className="wui-portal-field"
                             />
                         </div>
                     </div>
 
                     {/* Email */}
-                    <div className="signup-field">
-                        <label htmlFor="email" className="signup-label">
+                    <div className="wui-chamber-field">
+                        <label htmlFor="email" className="wui-chamber-intent">
                             Email
                         </label>
-                        <div className="signup-input-wrapper">
-                            <div className="signup-input-icon">
+                        <div className="wui-chamber-portal-wrapper">
+                            <div className="wui-portal-atom">
                                 <MailIcon />
                             </div>
                             <input
@@ -107,18 +107,18 @@ const SignUpForm = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="name@example.com"
-                                className="signup-input"
+                                className="wui-portal-field"
                             />
                         </div>
                     </div>
 
                     {/* Password */}
-                    <div className="signup-field">
-                        <label htmlFor="password" className="signup-label">
+                    <div className="wui-chamber-field">
+                        <label htmlFor="password" className="wui-chamber-intent">
                             Password
                         </label>
-                        <div className="signup-input-wrapper">
-                            <div className="signup-input-icon">
+                        <div className="wui-chamber-portal-wrapper">
+                            <div className="wui-portal-atom">
                                 <LockIcon />
                             </div>
                             <input
@@ -127,12 +127,12 @@ const SignUpForm = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Enter your password"
-                                className="signup-input signup-password"
+                                className="wui-portal-field wui-portal-password"
                             />
                             <button
                                 type="button"
                                 onClick={togglePasswordVisibility}
-                                className="signup-password-toggle"
+                                className="wui-portal-eye"
                             >
                                 {showPassword ? <EyeOffIcon /> : <EyeIcon />}
                             </button>
@@ -140,56 +140,56 @@ const SignUpForm = () => {
                     </div>
 
                     {/* Terms Checkbox */}
-                    <div className="signup-terms">
+                    <div className="wui-chamber-rift">
                         <input
                             id="terms"
                             type="checkbox"
                             checked={agreeTerms}
                             onChange={(e) => setAgreeTerms(e.target.checked)}
-                            className="signup-checkbox"
+                            className="wui-gem-check"
                         />
-                        <label htmlFor="terms" className="signup-terms-label">
+                        <label htmlFor="terms" className="wui-chamber-note">
                             I agree to the{' '}
-                            <a href="#" className="signup-link">
+                            <a href="#" className="wui-chamber-path">
                                 Terms of Service
                             </a>{' '}
                             and{' '}
-                            <a href="#" className="signup-link">
+                            <a href="#" className="wui-chamber-path">
                                 Privacy Policy
                             </a>
                         </label>
                     </div>
 
                     {/* Submit Button */}
-                    <button type="submit" className="signup-submit-btn">
+                    <button type="submit" className="wui-trigger-prime">
                         Create account
                     </button>
                 </form>
 
                 {/* Divider */}
-                <div className="signup-divider">
-                    <div className="signup-divider-line"></div>
-                    <span className="signup-divider-text">Or continue with</span>
-                    <div className="signup-divider-line"></div>
+                <div className="wui-chamber-break">
+                    <div className="wui-chamber-streak"></div>
+                    <span className="wui-chamber-dial">Or continue with</span>
+                    <div className="wui-chamber-streak"></div>
                 </div>
 
                 {/* Social Buttons */}
-                <div className="signup-social-buttons">
-                    <button className="signup-social-btn">
+                <div className="wui-chamber-stack">
+                    <button className="wui-chamber-trigger">
                         <GitHubIcon />
                         <span>GitHub</span>
                     </button>
-                    <button className="signup-social-btn">
+                    <button className="wui-chamber-trigger">
                         <GoogleIcon />
                         <span>Google</span>
                     </button>
                 </div>
 
                 {/* Footer */}
-                <div className="signup-footer">
-                    <p className="signup-footer-text">
+                <div className="wui-chamber-base">
+                    <p className="wui-chamber-note">
                         Already have an account?{' '}
-                        <a href="#" className="signup-footer-link">
+                        <a href="#" className="wui-chamber-path">
                             Sign in
                         </a>
                     </p>

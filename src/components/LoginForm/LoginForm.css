@@ -1,4 +1,4 @@
-.login-form-wrapper {
+.wui-chamber-bay {
     width: 100%;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.login-form-container {
+.wui-chamber-well {
     position: relative;
     width: 100%;
     max-width: 24rem;
@@ -19,12 +19,12 @@
 }
 
 /* Header */
-.login-header {
+.wui-chamber-crown {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
-.login-icon-wrapper {
+.wui-chamber-atom {
     display: inline-flex;
     padding: 0.5rem;
     background: #f4f4f5;
@@ -39,32 +39,32 @@
     color: #52525b;
 }
 
-.login-title-wrapper {
+.wui-chamber-apex {
     margin-top: 0.75rem;
 }
 
-.login-title {
+.wui-chamber-herald {
     font-size: 1.5rem;
     font-weight: 600;
     color: #18181b;
     margin: 0 0 0.25rem 0;
 }
 
-.login-subtitle {
+.wui-chamber-voice {
     font-size: 0.875rem;
     color: #52525b;
     margin: 0;
 }
 
 /* Social Buttons */
-.social-buttons {
+.wui-chamber-stack {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-.social-btn {
+.wui-chamber-trigger {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,12 +77,12 @@
     transition: all 0.2s;
 }
 
-.social-btn:hover {
+.wui-chamber-trigger:hover {
     background: #f4f4f5;
     color: #18181b;
 }
 
-.social-btn:focus-visible {
+.wui-chamber-trigger:focus-visible {
     outline: 1px solid #18181b;
     outline-offset: 2px;
 }
@@ -102,25 +102,25 @@
 }
 
 /* Divider */
-.login-divider {
+.wui-chamber-rift {
     position: relative;
     margin-bottom: 1.5rem;
 }
 
-.divider-line {
+.wui-chamber-streak {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
 }
 
-.divider-line::before {
+.wui-chamber-streak::before {
     content: '';
     width: 100%;
     border-top: 1px solid #e4e4e7;
 }
 
-.divider-text {
+.wui-chamber-dial {
     position: relative;
     display: flex;
     justify-content: center;
@@ -128,22 +128,22 @@
     text-transform: uppercase;
 }
 
-.divider-text span {
+.wui-chamber-dial span {
     background: white;
     padding: 0 0.5rem;
     color: #71717a;
 }
 
 /* Form */
-.login-form {
+.wui-chamber-core {
     margin-bottom: 1.5rem;
 }
 
-.form-field {
+.wui-chamber-field {
     margin-bottom: 1rem;
 }
 
-.form-label {
+.wui-chamber-intent {
     display: block;
     font-size: 0.875rem;
     font-weight: 500;
@@ -151,7 +151,7 @@
     margin-bottom: 0.5rem;
 }
 
-.form-input {
+.wui-portal-field {
     display: flex;
     width: 100%;
     height: 2.25rem;
@@ -164,24 +164,24 @@
     transition: all 0.2s;
 }
 
-.form-input::placeholder {
+.wui-portal-field::placeholder {
     color: #71717a;
 }
 
-.form-input:focus {
+.wui-portal-field:focus {
     outline: 1px solid #18181b;
     outline-offset: 2px;
 }
 
-.password-input-wrapper {
+.wui-chamber-portal-wrapper {
     position: relative;
 }
 
-.password-input {
+.wui-portal-password {
     padding-right: 2.5rem;
 }
 
-.password-toggle {
+.wui-portal-eye {
     position: absolute;
     right: 0.75rem;
     top: 50%;
@@ -195,7 +195,7 @@
     transition: color 0.2s;
 }
 
-.password-toggle:hover {
+.wui-portal-eye:hover {
     color: #18181b;
 }
 
@@ -205,7 +205,7 @@
     color: #71717a;
 }
 
-.submit-btn {
+.wui-trigger-prime {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -223,30 +223,30 @@
     transition: background 0.2s;
 }
 
-.submit-btn:hover {
+.wui-trigger-prime:hover {
     background: rgba(24, 24, 27, 0.9);
 }
 
-.submit-btn:focus-visible {
+.wui-trigger-prime:focus-visible {
     outline: 1px solid #18181b;
     outline-offset: 2px;
 }
 
 /* Footer */
-.login-footer {
+.wui-chamber-base {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.footer-text {
+.wui-chamber-note {
     font-size: 0.875rem;
     color: #52525b;
     margin: 0;
 }
 
-.footer-link {
+.wui-chamber-path {
     font-weight: 500;
     color: #18181b;
     text-decoration: underline;
@@ -254,19 +254,19 @@
     transition: color 0.2s;
 }
 
-.footer-link:hover {
+.wui-chamber-path:hover {
     color: #3f3f46;
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    .login-form-container {
+    .wui-chamber-well {
         background: #000000;
         border-color: #27272a;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
     }
 
-    .login-icon-wrapper {
+    .wui-chamber-atom {
         background: #18181b;
         border-color: #27272a;
     }
@@ -275,20 +275,20 @@
         color: #a1a1aa;
     }
 
-    .login-title {
+    .wui-chamber-herald {
         color: white;
     }
 
-    .login-subtitle {
+    .wui-chamber-voice {
         color: #a1a1aa;
     }
 
-    .social-btn {
+    .wui-chamber-trigger {
         background: #000000;
         border-color: #27272a;
     }
 
-    .social-btn:hover {
+    .wui-chamber-trigger:hover {
         background: #18181b;
         color: #fafafa;
     }
@@ -297,30 +297,30 @@
         color: white;
     }
 
-    .divider-line::before {
+    .wui-chamber-streak::before {
         border-color: #27272a;
     }
 
-    .divider-text span {
+    .wui-chamber-dial span {
         background: #18181b;
         color: #a1a1aa;
     }
 
-    .form-label {
+    .wui-chamber-intent {
         color: #fafafa;
     }
 
-    .form-input {
+    .wui-portal-field {
         background: #09090b;
         border-color: #27272a;
         color: white;
     }
 
-    .form-input::placeholder {
+    .wui-portal-field::placeholder {
         color: #a1a1aa;
     }
 
-    .form-input:focus {
+    .wui-portal-field:focus {
         outline: 1px solid #fafafa;
         outline-offset: 2px;
     }
@@ -329,28 +329,28 @@
         color: #a1a1aa;
     }
 
-    .password-toggle:hover {
+    .wui-portal-eye:hover {
         color: #fafafa;
     }
 
-    .submit-btn {
+    .wui-trigger-prime {
         background: #fafafa;
         color: #18181b;
     }
 
-    .submit-btn:hover {
+    .wui-trigger-prime:hover {
         background: rgba(250, 250, 250, 0.9);
     }
 
-    .footer-text {
+    .wui-chamber-note {
         color: #a1a1aa;
     }
 
-    .footer-link {
+    .wui-chamber-path {
         color: #fafafa;
     }
 
-    .footer-link:hover {
+    .wui-chamber-path:hover {
         color: #d4d4d8;
     }
 }

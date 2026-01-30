@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { getRawCode } from './codeRegistry'
+import { CodeArea } from '../../components'
 
 const TABS = {
   PREVIEW: 'preview',
@@ -73,23 +74,23 @@ export default function ComponentBlock({
   }
 
   return (
-    <div className="cb-shell">
-      <div className="cb-header">
-        <div className="cb-title">{title}</div>
-        {description ? <div className="cb-desc">{description}</div> : null}
+    <div className="wui-cb-frame">
+      <div className="wui-cb-crown">
+        <div className="wui-cb-herald">{title}</div>
+        {description ? <div className="wui-cb-voice">{description}</div> : null}
       </div>
 
-      <div className="cb-tabs">
+      <div className="wui-cb-orbit">
         <button
           type="button"
-          className={`cb-tab ${activeTab === TABS.PREVIEW ? 'active' : ''}`}
+          className={`wui-cb-trigger ${activeTab === TABS.PREVIEW ? 'active' : ''}`}
           onClick={() => setActiveTab(TABS.PREVIEW)}
         >
           Preview
         </button>
         <button
           type="button"
-          className={`cb-tab ${activeTab === TABS.CODE ? 'active' : ''}`}
+          className={`wui-cb-trigger ${activeTab === TABS.CODE ? 'active' : ''}`}
           onClick={() => setActiveTab(TABS.CODE)}
         >
           Code
@@ -97,16 +98,16 @@ export default function ComponentBlock({
       </div>
 
       {activeTab === TABS.PREVIEW ? (
-        <div className="cb-preview">
+        <div className="wui-cb-theater">
           {preview}
         </div>
       ) : (
-        <div className="cb-code">
-          <div className="cb-code-toolbar">
-            <div className="cb-code-tabs">
+        <div className="wui-cb-void">
+          <div className="wui-cb-apex">
+            <div className="wui-cb-void-stack">
               <button
                 type="button"
-                className={`cb-code-tab ${activeCodeTab === CODE_TABS.JSX ? 'active' : ''}`}
+                className={`wui-cb-void-trigger ${activeCodeTab === CODE_TABS.JSX ? 'active' : ''}`}
                 onClick={() => setActiveCodeTab(CODE_TABS.JSX)}
                 disabled={!jsxCode}
                 title={jsxCode ? 'Show JSX' : 'JSX source not linked'}
@@ -115,7 +116,7 @@ export default function ComponentBlock({
               </button>
               <button
                 type="button"
-                className={`cb-code-tab ${activeCodeTab === CODE_TABS.CSS ? 'active' : ''}`}
+                className={`wui-cb-void-trigger ${activeCodeTab === CODE_TABS.CSS ? 'active' : ''}`}
                 onClick={() => setActiveCodeTab(CODE_TABS.CSS)}
                 disabled={!cssCode}
                 title={cssCode ? 'Show CSS' : 'CSS source not linked'}
@@ -126,7 +127,7 @@ export default function ComponentBlock({
 
             <button
               type="button"
-              className={`cb-copy ${copied ? 'copied' : ''}`}
+              className={`wui-cb-copy ${copied ? 'copied' : ''}`}
               onClick={handleCopy}
               disabled={!displayedCode}
               title={copied ? 'Copied!' : 'Copy'}
@@ -167,9 +168,14 @@ export default function ComponentBlock({
             </button>
           </div>
 
-          <pre className="cb-pre">
-            <code>{displayedCode || 'No source linked for this tab.'}</code>
-          </pre>
+
+          <div style={{ padding: '0.5rem' }}>
+            <CodeArea
+              code={displayedCode}
+              language={activeCodeTab === CODE_TABS.JSX ? 'JSX' : 'CSS'}
+              filename={activeCodeTab === CODE_TABS.JSX ? `${title.replace(/\s+/g, '')}.jsx` : `${title.replace(/\s+/g, '')}.css`}
+            />
+          </div>
         </div>
       )}
     </div>

@@ -53,7 +53,8 @@ import {
   ThemeSwitchView,
   ExpandingMenu,
   JobCard,
-  LoginForm4
+  LoginForm4,
+  CodeProfile
 } from '../../components'
 import ComponentBlock from './ComponentBlock'
 import './Components.css'
@@ -88,7 +89,7 @@ const Components = () => {
             description="Reusable button component with variants and sizes."
             code={{ jsxPath: '../../components/Button/Button.jsx', cssPath: '../../components/Button/Button.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Button variant="default">Default</Button>
                 <Button variant="destructive">Destructive</Button>
                 <Button variant="outline">Outline</Button>
@@ -113,7 +114,7 @@ const Components = () => {
             description="Beautiful buttons with glow effects and gradient backgrounds."
             code={{ jsxPath: '../../components/GlowButton/GlowButton.jsx', cssPath: '../../components/GlowButton/GlowButton.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: '#f8f9fa', borderRadius: '8px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: '#f8f9fa', borderRadius: '8px' }}>
                 <GlowButton variant="blue">Blue Glow</GlowButton>
                 <GlowButton variant="pink">Pink Glow</GlowButton>
                 <GlowButton variant="green">Green Glow</GlowButton>
@@ -133,7 +134,7 @@ const Components = () => {
             description="Input component with label, required state, and error handling."
             code={{ jsxPath: '../../components/Input/Input.jsx', cssPath: '../../components/Input/Input.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Input
                   label="Text Input"
                   placeholder="Enter text here"
@@ -171,7 +172,7 @@ const Components = () => {
             description="Textarea component with optional max length counter."
             code={{ jsxPath: '../../components/Textarea/Textarea.jsx', cssPath: '../../components/Textarea/Textarea.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Textarea
                   label="Message"
                   placeholder="Enter your message"
@@ -203,7 +204,7 @@ const Components = () => {
             description="Dropdown/select component with options + error state."
             code={{ jsxPath: '../../components/Dropdown/Dropdown.jsx', cssPath: '../../components/Dropdown/Dropdown.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Dropdown
                   label="Select Option"
                   options={dropdownOptions}
@@ -234,7 +235,7 @@ const Components = () => {
             description="User profile dropdown menu with avatar, user info, and action items."
             code={{ jsxPath: '../../components/UserProfileDropdown/UserProfileDropdown.jsx', cssPath: '../../components/UserProfileDropdown/UserProfileDropdown.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', display: 'flex', justifyContent: 'center' }}>
                 <UserProfileDropdown />
               </div>
             }
@@ -270,7 +271,7 @@ const Components = () => {
             description="Animated toast notifications with multiple types, positions, and auto-dismiss functionality."
             code={{ jsxPath: '../../components/Toast/Toast.jsx', cssPath: '../../components/Toast/Toast.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '0', minHeight: '600px', position: 'relative' }}>
+              <div className="wui-showcase-bay" style={{ padding: '0', minHeight: '600px', position: 'relative' }}>
                 <ToastView />
               </div>
             }
@@ -324,7 +325,7 @@ const Components = () => {
             description="Animated tabs with expand effect, pill animation, and separator support."
             code={{ jsxPath: '../../components/ExpandedTabs/ExpandedTabs.jsx', cssPath: '../../components/ExpandedTabs/ExpandedTabs.css' }}
             preview={
-              <div className="component-showcase" style={{ padding: '2rem', background: '#0f172a', borderRadius: '8px' }}>
+              <div className="wui-showcase-bay" style={{ padding: '2rem', background: '#0f172a', borderRadius: '8px' }}>
                 <ExpandedTabsView />
               </div>
             }
@@ -648,7 +649,7 @@ const Components = () => {
             description="Custom styled checkbox with disabled state."
             code={{ jsxPath: '../../components/Checkbox/Checkbox.jsx', cssPath: '../../components/Checkbox/Checkbox.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Checkbox
                   label="I agree to the terms and conditions"
                   checked={checkboxChecked}
@@ -671,7 +672,7 @@ const Components = () => {
             description="Radio group component with custom styling."
             code={{ jsxPath: '../../components/Radio/Radio.jsx', cssPath: '../../components/Radio/Radio.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Radio
                   name="example"
                   value="option1"
@@ -727,7 +728,7 @@ const Components = () => {
             description="Modal dialog with overlay and close controls."
             code={{ jsxPath: '../../components/Modal/Modal.jsx', cssPath: '../../components/Modal/Modal.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <Button onClick={() => setIsModalOpen(true)}>Open Modal</Button>
                 <Modal
                   isOpen={isModalOpen}
@@ -756,7 +757,7 @@ const Components = () => {
             description="Alert banners for success/error/warning/info."
             code={{ jsxPath: '../../components/Alert/Alert.jsx', cssPath: '../../components/Alert/Alert.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 {showAlert && (
                   <Alert
                     type="success"
@@ -820,7 +821,7 @@ const Components = () => {
             description="Center + orbit icons with hover highlight."
             code={{ jsxPath: '../../components/ReactOrbit/ReactOrbit.jsx', cssPath: '../../components/ReactOrbit/ReactOrbit.css' }}
             preview={
-              <div className="component-showcase">
+              <div className="wui-showcase-bay">
                 <ReactOrbit />
               </div>
             }
@@ -1088,6 +1089,24 @@ const Components = () => {
             }
           />
         )
+      },
+      {
+        id: 'code-profile',
+        menuLabel: 'Code Profile',
+        title: 'Developer Profile Card',
+        badge: 'New',
+        render: () => (
+          <ComponentBlock
+            title="Developer Profile Card"
+            description="Premium code-styled developer profile with file system aesthetics, syntax highlighting, and glowing atmospheric effects."
+            code={{ jsxPath: '../../components/CodeProfile/CodeProfile.jsx', cssPath: '../../components/CodeProfile/CodeProfile.css' }}
+            preview={
+              <div className="component-showcase" style={{ padding: '2rem', background: '#09090b', borderRadius: '12px' }}>
+                <CodeProfile />
+              </div>
+            }
+          />
+        )
       }
     ]
   }, [
@@ -1126,7 +1145,7 @@ const Components = () => {
     {
       title: 'Containers/Structural Components',
       items: sections.filter(s =>
-        ['modal', 'accordion', '3d-card', '3d-carousel', 'user-profile-dropdown', 'image-swiper', 'glitch-vault-card', 'project-card', 'nft-marketplace', 'masonry-grid', 'chatbot-ui', 'job-card'].includes(s.id)
+        ['modal', 'accordion', '3d-card', '3d-carousel', 'user-profile-dropdown', 'image-swiper', 'glitch-vault-card', 'project-card', 'nft-marketplace', 'masonry-grid', 'chatbot-ui', 'job-card', 'code-profile'].includes(s.id)
       )
     }
   ], [sections])
@@ -1213,46 +1232,46 @@ const Components = () => {
   }
 
   return (
-    <div className="components-page">
-      <div className="components-shell">
-        <aside className="components-sidebar" aria-label="UI Components Menu">
-          <div className="sidebar-title">
+    <div className="wui-showcase-page">
+      <div className="wui-showcase-shell">
+        <aside className="wui-showcase-orbit" aria-label="UI Components Menu">
+          <div className="wui-showcase-crown">
             <span>UI Components</span>
           </div>
-          <div className="sidebar-search">
+          <div className="wui-showcase-search">
             <input
               type="text"
               placeholder="Search components..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="sidebar-search-input"
+              className="wui-showcase-portal"
             />
           </div>
-          <nav className="sidebar-nav">
+          <nav className="wui-showcase-stack">
             <button
               type="button"
-              className={`sidebar-item ${selectedComponentId === null ? 'active' : ''}`}
+              className={`wui-showcase-trigger ${selectedComponentId === null ? 'active' : ''}`}
               onClick={() => setSelectedComponentId(null)}
             >
-              <span className="sidebar-dot" aria-hidden="true"></span>
-              <span className="sidebar-label">Show All</span>
+              <span className="wui-showcase-dot" aria-hidden="true"></span>
+              <span className="wui-showcase-voice">Show All</span>
             </button>
 
             {filteredCategories.map((category, index) => (
-              <div key={index} className="sidebar-category">
-                <h5 className="sidebar-category-title">{category.title}</h5>
+              <div key={index} className="wui-showcase-group">
+                <h5 className="wui-showcase-group-crown">{category.title}</h5>
                 {category.items.map((s) => {
                   const isActive = selectedComponentId === s.id
                   return (
                     <button
                       key={s.id}
                       type="button"
-                      className={`sidebar-item ${isActive ? 'active' : ''}`}
+                      className={`wui-showcase-trigger ${isActive ? 'active' : ''}`}
                       onClick={() => handleComponentClick(s.id)}
                     >
-                      <span className="sidebar-dot" aria-hidden="true"></span>
-                      <span className="sidebar-label">{s.menuLabel}</span>
-                      {s.badge && <span className="sidebar-badge">{s.badge}</span>}
+                      <span className="wui-showcase-dot" aria-hidden="true"></span>
+                      <span className="wui-showcase-voice">{s.menuLabel}</span>
+                      {s.badge && <span className="wui-showcase-gem">{s.badge}</span>}
                     </button>
                   )
                 })}
@@ -1261,10 +1280,10 @@ const Components = () => {
           </nav>
         </aside>
 
-        <main className="components-main">
-          <div className="components-container">
+        <main className="wui-showcase-core">
+          <div className="wui-showcase-deck">
             <h1>Component Library</h1>
-            <p className="subtitle">
+            <p className="wui-showcase-herald">
               {selectedComponentId
                 ? `Showing: ${sections.find((s) => s.id === selectedComponentId)?.menuLabel || ''}`
                 : 'All reusable components for your website'}
@@ -1276,7 +1295,7 @@ const Components = () => {
               </div>
             ) : (
               visibleItems.flatMap(cat => cat.items).map((s) => (
-                <section key={s.id} id={s.id} className="ui-section">
+                <section key={s.id} id={s.id} className="wui-showcase-field">
                   {s.render()}
                 </section>
               ))

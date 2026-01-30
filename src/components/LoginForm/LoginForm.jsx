@@ -57,69 +57,69 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="login-form-wrapper">
-            <div className="login-form-container">
+        <div className="wui-chamber-bay">
+            <div className="wui-chamber-well">
                 {/* Header */}
-                <div className="login-header">
-                    <div className="login-icon-wrapper">
+                <div className="wui-chamber-crown">
+                    <div className="wui-chamber-atom">
                         <UserIcon />
                     </div>
-                    <div className="login-title-wrapper">
-                        <h1 className="login-title">Welcome back</h1>
-                        <p className="login-subtitle">Enter your credentials to sign in</p>
+                    <div className="wui-chamber-apex">
+                        <h1 className="wui-chamber-herald">Welcome back</h1>
+                        <p className="wui-chamber-voice">Enter your credentials to sign in</p>
                     </div>
                 </div>
 
                 {/* Social Login Buttons */}
-                <div className="social-buttons">
-                    <button className="social-btn" aria-label="Sign in with Apple">
+                <div className="wui-chamber-stack">
+                    <button className="wui-chamber-trigger" aria-label="Sign in with Apple">
                         <AppleIcon />
                     </button>
-                    <button className="social-btn" aria-label="Sign in with Google">
+                    <button className="wui-chamber-trigger" aria-label="Sign in with Google">
                         <GoogleIcon />
                     </button>
-                    <button className="social-btn" aria-label="Sign in with X">
+                    <button className="wui-chamber-trigger" aria-label="Sign in with X">
                         <XIcon />
                     </button>
                 </div>
 
                 {/* Divider */}
-                <div className="login-divider">
-                    <div className="divider-line"></div>
-                    <div className="divider-text">
+                <div className="wui-chamber-rift">
+                    <div className="wui-chamber-streak"></div>
+                    <div className="wui-chamber-dial">
                         <span>Or continue with</span>
                     </div>
                 </div>
 
                 {/* Form */}
-                <form className="login-form" onSubmit={handleSubmit}>
-                    <div className="form-field">
-                        <label htmlFor="email" className="form-label">Email</label>
+                <form className="wui-chamber-core" onSubmit={handleSubmit}>
+                    <div className="wui-chamber-field">
+                        <label htmlFor="email" className="wui-chamber-intent">Email</label>
                         <input
                             type="email"
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="name@example.com"
-                            className="form-input"
+                            className="wui-portal-field"
                         />
                     </div>
 
-                    <div className="form-field">
-                        <label htmlFor="password" className="form-label">Password</label>
-                        <div className="password-input-wrapper">
+                    <div className="wui-chamber-field">
+                        <label htmlFor="password" className="wui-chamber-intent">Password</label>
+                        <div className="wui-chamber-portal-wrapper">
                             <input
                                 type={showPassword ? 'text' : 'password'}
                                 id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Enter your password"
-                                className="form-input password-input"
+                                className="wui-portal-field wui-portal-password"
                             />
                             <button
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
-                                className="password-toggle"
+                                className="wui-portal-eye"
                                 aria-label="Toggle password visibility"
                             >
                                 {showPassword ? <EyeOffIcon /> : <EyeIcon />}
@@ -127,18 +127,18 @@ const LoginForm = () => {
                         </div>
                     </div>
 
-                    <button type="submit" className="submit-btn">
+                    <button type="submit" className="wui-trigger-prime">
                         Sign In
                     </button>
                 </form>
 
                 {/* Footer Links */}
-                <div className="login-footer">
-                    <p className="footer-text">
+                <div className="wui-chamber-base">
+                    <p className="wui-chamber-note">
                         Don't have an account?{' '}
-                        <a href="#" className="footer-link">Sign up</a>
+                        <a href="#" className="wui-chamber-path">Sign up</a>
                     </p>
-                    <a href="#" className="footer-link">Forgot your password?</a>
+                    <a href="#" className="wui-chamber-path">Forgot your password?</a>
                 </div>
             </div>
         </div>

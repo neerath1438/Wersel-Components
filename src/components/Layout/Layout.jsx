@@ -4,10 +4,10 @@ import './Layout.css'
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
-      <div className="page-watermark">Wersel Components</div>
+    <div className="wui-shell">
+      <div className="wui-spirit">Wersel Components</div>
       <Header />
-      <main className="main-content">
+      <main className="wui-theater">
         {children}
       </main>
       <Footer />

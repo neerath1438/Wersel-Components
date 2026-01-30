@@ -1,9 +1,9 @@
-.input-wrapper {
+.wui-portal-bay {
   margin-bottom: 1rem;
   width: 100%;
 }
 
-.input-label {
+.wui-portal-herald {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -11,28 +11,28 @@
   font-size: 0.875rem;
 }
 
-.input-label.required::after {
+.wui-portal-herald.required::after {
   content: ' *';
   color: #e74c3c;
 }
 
-.input-container {
+.wui-portal-field {
   position: relative;
   border: 2px solid #ddd;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
-.input-container.focused {
+.wui-portal-field.focused {
   border-color: #3498db;
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
-.input-container.error {
+.wui-portal-field.error {
   border-color: #e74c3c;
 }
 
-.input-field {
+.wui-portal {
   width: 100%;
   padding: 0.75rem;
   border: none;
@@ -41,15 +41,14 @@
   background: transparent;
 }
 
-.input-field:disabled {
+.wui-portal:disabled {
   background-color: #f5f5f5;
   cursor: not-allowed;
 }
 
-.input-error {
+.wui-portal-clash {
   display: block;
   margin-top: 0.25rem;
   color: #e74c3c;
   font-size: 0.875rem;
 }
-

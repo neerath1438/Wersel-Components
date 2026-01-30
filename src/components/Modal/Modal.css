@@ -1,4 +1,4 @@
-.modal-overlay {
+.wui-chamber-veil {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,54 +9,56 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn 0.3s ease;
+  animation: wui-chamber-fade-in 0.3s ease;
 }
 
-@keyframes fadeIn {
+@keyframes wui-chamber-fade-in {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-.modal-content {
+.wui-chamber {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   max-height: 90vh;
   overflow-y: auto;
-  animation: slideUp 0.3s ease;
+  animation: wui-chamber-slide-up 0.3s ease;
 }
 
-@keyframes slideUp {
+@keyframes wui-chamber-slide-up {
   from {
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-.modal-small {
+.wui-chamber-small {
   width: 90%;
   max-width: 400px;
 }
 
-.modal-medium {
+.wui-chamber-medium {
   width: 90%;
   max-width: 600px;
 }
 
-.modal-large {
+.wui-chamber-large {
   width: 90%;
   max-width: 900px;
 }
 
-.modal-header {
+.wui-chamber-crown {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,13 +66,13 @@
   border-bottom: 1px solid #eee;
 }
 
-.modal-title {
+.wui-chamber-herald {
   margin: 0;
   color: #2c3e50;
   font-size: 1.5rem;
 }
 
-.modal-close {
+.wui-chamber-exit {
   background: none;
   border: none;
   font-size: 2rem;
@@ -85,11 +87,10 @@
   transition: color 0.3s;
 }
 
-.modal-close:hover {
+.wui-chamber-exit:hover {
   color: #333;
 }
 
-.modal-body {
+.wui-chamber-core {
   padding: 1.5rem;
 }
-

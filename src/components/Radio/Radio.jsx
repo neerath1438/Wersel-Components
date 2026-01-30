@@ -11,7 +11,7 @@ const Radio = ({
   ...props
 }) => {
   return (
-    <label className={`radio-wrapper ${className} ${disabled ? 'disabled' : ''}`}>
+    <label className={`wui-choice-field ${className} ${disabled ? 'disabled' : ''}`}>
       <input
         type="radio"
         name={name}
@@ -19,11 +19,11 @@ const Radio = ({
         checked={checked}
         onChange={onChange}
         disabled={disabled}
-        className="radio-input"
+        className="wui-choice"
         {...props}
       />
-      <span className="radio-custom"></span>
-      {label && <span className="radio-label">{label}</span>}
+      <span className="wui-choice-gem"></span>
+      {label && <span className="wui-choice-voice">{label}</span>}
     </label>
   )
 }

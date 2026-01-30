@@ -17,17 +17,17 @@ const Modal = ({ isOpen, onClose, title, children, size = 'medium', showCloseBut
   if (!isOpen) return null
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className={`modal-content modal-${size}`} onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          {title && <h2 className="modal-title">{title}</h2>}
+    <div className="wui-chamber-veil" onClick={onClose}>
+      <div className={`wui-chamber wui-chamber-${size}`} onClick={(e) => e.stopPropagation()}>
+        <div className="wui-chamber-crown">
+          {title && <h2 className="wui-chamber-herald">{title}</h2>}
           {showCloseButton && (
-            <button className="modal-close" onClick={onClose}>
+            <button className="wui-chamber-exit" onClick={onClose}>
               ×
             </button>
           )}
         </div>
-        <div className="modal-body">
+        <div className="wui-chamber-core">
           {children}
         </div>
       </div>

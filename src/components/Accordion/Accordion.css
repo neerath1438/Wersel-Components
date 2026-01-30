@@ -1,10 +1,10 @@
-.accordion-container {
+.wui-layer-stage {
     width: 100%;
     max-width: 42rem;
     margin: 0 auto;
 }
 
-.accordion-title {
+.wui-layer-crown {
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
@@ -12,22 +12,22 @@
     margin-bottom: 1.5rem;
 }
 
-.accordion-list {
+.wui-layer-stack {
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     overflow: hidden;
 }
 
 /* Accordion Item */
-.accordion-item {
+.wui-layer-brick {
     border-bottom: 1px solid #e5e7eb;
 }
 
-.accordion-item:last-child {
+.wui-layer-brick:last-child {
     border-bottom: none;
 }
 
-.accordion-header {
+.wui-layer-trigger {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,58 +40,58 @@
     transition: background-color 0.2s;
 }
 
-.accordion-header:hover {
+.wui-layer-trigger:hover {
     background-color: #f9fafb;
 }
 
-.accordion-header:focus {
+.wui-layer-trigger:focus {
     outline: none;
 }
 
-.accordion-header-content {
+.wui-layer-intent {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.accordion-header-content svg {
+.wui-layer-intent svg {
     color: #6b7280;
     flex-shrink: 0;
 }
 
-.accordion-question {
+.wui-layer-voice {
     font-size: 1rem;
     font-weight: 500;
     color: #1f2937;
 }
 
-.accordion-chevron {
+.wui-layer-dial {
     color: #6b7280;
     transition: transform 0.3s;
     flex-shrink: 0;
 }
 
-.accordion-chevron.open {
+.wui-layer-dial.open {
     transform: rotate(180deg);
 }
 
 /* Accordion Content */
-.accordion-content {
+.wui-layer-depth {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
 }
 
-.accordion-content.open {
+.wui-layer-depth.open {
     max-height: 24rem;
 }
 
-.accordion-answer {
+.wui-layer-well {
     padding: 1rem;
     padding-left: 3rem;
 }
 
-.accordion-answer p {
+.wui-layer-well p {
     margin: 0;
     color: #4b5563;
     line-height: 1.6;
@@ -99,35 +99,35 @@
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    .accordion-title {
+    .wui-layer-crown {
         color: #f9fafb;
     }
 
-    .accordion-list {
+    .wui-layer-stack {
         border-color: #374151;
     }
 
-    .accordion-item {
+    .wui-layer-brick {
         border-color: #374151;
     }
 
-    .accordion-header:hover {
+    .wui-layer-trigger:hover {
         background-color: #1f2937;
     }
 
-    .accordion-header-content svg {
+    .wui-layer-intent svg {
         color: #9ca3af;
     }
 
-    .accordion-question {
+    .wui-layer-voice {
         color: #e5e7eb;
     }
 
-    .accordion-chevron {
+    .wui-layer-dial {
         color: #9ca3af;
     }
 
-    .accordion-answer p {
+    .wui-layer-well p {
         color: #d1d5db;
     }
 }

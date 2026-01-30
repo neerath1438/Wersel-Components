@@ -25,7 +25,7 @@ const Button = ({
   const mappedSize = sizeMap[size] || 'medium'
 
   // Combine classes
-  const buttonClasses = `btn btn-${variant} btn-${mappedSize} ${className}`.trim()
+  const buttonClasses = `wui-trigger wui-trigger-${variant} wui-trigger-${mappedSize} ${className}`.trim()
 
   // Check if it's an icon-only button
   const isIconOnly = !children && (iconLeft || iconRight)
@@ -39,16 +39,16 @@ const Button = ({
       {...props}
     >
       {loading && (
-        <span className="btn-spinner"></span>
+        <span className="wui-pulse"></span>
       )}
       {!loading && iconLeft && (
-        <span className="btn-icon-left">{iconLeft}</span>
+        <span className="wui-trigger-left">{iconLeft}</span>
       )}
       {!loading && children && (
-        <span className={isIconOnly ? '' : 'btn-text'}>{children}</span>
+        <span className={isIconOnly ? '' : 'wui-trigger-voice'}>{children}</span>
       )}
       {!loading && iconRight && (
-        <span className="btn-icon-right">{iconRight}</span>
+        <span className="wui-trigger-right">{iconRight}</span>
       )}
     </button>
   )

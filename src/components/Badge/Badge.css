@@ -1,5 +1,5 @@
 /* Base Badge Styles */
-.badge {
+.wui-gem {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
@@ -14,21 +14,21 @@
     transition: all 0.3s ease;
 }
 
-.badge-icon-left,
-.badge-icon-right {
+.wui-gem-left,
+.wui-gem-right {
     display: inline-flex;
     align-items: center;
     width: 1rem;
     height: 1rem;
 }
 
-.badge-icon-left svg,
-.badge-icon-right svg {
+.wui-gem-left svg,
+.wui-gem-right svg {
     width: 100%;
     height: 100%;
 }
 
-.badge-dismiss {
+.wui-gem-exit {
     margin-left: 0.25rem;
     padding: 0;
     background: none;
@@ -41,31 +41,31 @@
     transition: opacity 0.2s;
 }
 
-.badge-dismiss:hover {
+.wui-gem-exit:hover {
     opacity: 1;
 }
 
 /* Clickable Badge */
-button.badge,
-a.badge {
+button.wui-gem,
+a.wui-gem {
     cursor: pointer;
     text-decoration: none;
 }
 
-button.badge:hover,
-a.badge:hover {
+button.wui-gem:hover,
+a.wui-gem:hover {
     opacity: 0.9;
     transform: translateY(-1px);
 }
 
-button.badge:active,
-a.badge:active {
+button.wui-gem:active,
+a.wui-gem:active {
     transform: translateY(0);
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    .badge {
+    .wui-gem {
         background-color: #1e3a8a;
         color: #bfdbfe;
     }

@@ -9,17 +9,17 @@ const Checkbox = ({
   ...props
 }) => {
   return (
-    <label className={`checkbox-wrapper ${className} ${disabled ? 'disabled' : ''}`}>
+    <label className={`wui-mark-field ${className} ${disabled ? 'disabled' : ''}`}>
       <input
         type="checkbox"
         checked={checked}
         onChange={onChange}
         disabled={disabled}
-        className="checkbox-input"
+        className="wui-mark"
         {...props}
       />
-      <span className="checkbox-custom"></span>
-      {label && <span className="checkbox-label">{label}</span>}
+      <span className="wui-mark-gem"></span>
+      {label && <span className="wui-mark-voice">{label}</span>}
     </label>
   )
 }

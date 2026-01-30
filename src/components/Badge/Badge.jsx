@@ -11,15 +11,15 @@ const Badge = ({
     iconRight,
     ...props
 }) => {
-    const baseClass = 'badge';
+    const baseClass = 'wui-gem';
     const combinedClass = `${baseClass} ${className}`.trim();
 
     if (href) {
         return (
             <a href={href} className={combinedClass} {...props}>
-                {iconLeft && <span className="badge-icon-left">{iconLeft}</span>}
+                {iconLeft && <span className="wui-gem-left">{iconLeft}</span>}
                 {children}
-                {iconRight && <span className="badge-icon-right">{iconRight}</span>}
+                {iconRight && <span className="wui-gem-right">{iconRight}</span>}
             </a>
         );
     }
@@ -27,22 +27,22 @@ const Badge = ({
     if (onClick) {
         return (
             <button onClick={onClick} className={combinedClass} {...props}>
-                {iconLeft && <span className="badge-icon-left">{iconLeft}</span>}
+                {iconLeft && <span className="wui-gem-left">{iconLeft}</span>}
                 {children}
-                {iconRight && <span className="badge-icon-right">{iconRight}</span>}
+                {iconRight && <span className="wui-gem-right">{iconRight}</span>}
             </button>
         );
     }
 
     return (
         <span className={combinedClass} {...props}>
-            {iconLeft && <span className="badge-icon-left">{iconLeft}</span>}
+            {iconLeft && <span className="wui-gem-left">{iconLeft}</span>}
             {children}
-            {iconRight && <span className="badge-icon-right">{iconRight}</span>}
+            {iconRight && <span className="wui-gem-right">{iconRight}</span>}
             {onDismiss && (
                 <button
                     onClick={onDismiss}
-                    className="badge-dismiss"
+                    className="wui-gem-exit"
                     aria-label="Dismiss"
                 >
                     ×

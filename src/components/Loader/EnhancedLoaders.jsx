@@ -1,14 +1,14 @@
 import "./EnhancedLoaders.css";
 
 export const ClassicSpin = () => (
-    <svg className="classic-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <svg className="wui-pulse-classic" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
     </svg>
 );
 
 export const DotsBounce = () => (
-    <div className="dots-bounce">
+    <div className="wui-pulse-bounce">
         <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>
@@ -16,15 +16,15 @@ export const DotsBounce = () => (
 );
 
 export const PulseLoader = () => (
-    <div className="pulse-loader"></div>
+    <div className="wui-pulse-soft"></div>
 );
 
 export const RingLoader = () => (
-    <div className="ring-loader"></div>
+    <div className="wui-pulse-ring"></div>
 );
 
 export const BarsLoader = () => (
-    <div className="bars-loader">
+    <div className="wui-pulse-bars">
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
@@ -32,18 +32,18 @@ export const BarsLoader = () => (
 );
 
 export const DualRingLoader = () => (
-    <div className="dual-ring-loader"></div>
+    <div className="wui-pulse-dual"></div>
 );
 
 export const RippleLoader = () => (
-    <div className="ripple-loader">
+    <div className="wui-pulse-ripple">
         <div className="ripple-outer"></div>
         <div className="ripple-inner"></div>
     </div>
 );
 
 export const PingDotsLoader = () => (
-    <div className="ping-dots-loader">
+    <div className="wui-pulse-ping">
         <span className="dot"></span>
         <span className="dot"></span>
         <span className="dot"></span>
@@ -51,7 +51,7 @@ export const PingDotsLoader = () => (
 );
 
 export const GridLoader = () => (
-    <div className="grid-loader">
+    <div className="wui-pulse-grid">
         <div className="cell"></div>
         <div className="cell"></div>
         <div className="cell"></div>
@@ -65,7 +65,7 @@ export const GridLoader = () => (
 );
 
 export const ThreeDotsScale = () => (
-    <div className="three-dots-scale">
+    <div className="wui-pulse-scale">
         <span className="dot"></span>
         <span className="dot"></span>
         <span className="dot"></span>
@@ -73,11 +73,11 @@ export const ThreeDotsScale = () => (
 );
 
 export const SquareSpin = () => (
-    <div className="square-spin"></div>
+    <div className="wui-pulse-square"></div>
 );
 
 export const RotatingDots = () => (
-    <svg className="rotating-dots" viewBox="0 0 24 24">
+    <svg className="wui-pulse-orbit" viewBox="0 0 24 24">
         <circle cx="4" cy="12" r="2" fill="currentColor" />
         <circle cx="12" cy="4" r="2" fill="currentColor" />
         <circle cx="20" cy="12" r="2" fill="currentColor" />
@@ -86,7 +86,7 @@ export const RotatingDots = () => (
 );
 
 export const WaveLoader = () => (
-    <div className="wave-loader">
+    <div className="wui-pulse-wave">
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
@@ -98,7 +98,7 @@ export const WaveLoader = () => (
 );
 
 export const FoldingCube = () => (
-    <div className="folding-cube">
+    <div className="wui-pulse-cube">
         <div className="cube top-left"></div>
         <div className="cube top-right"></div>
         <div className="cube bottom-right"></div>
@@ -107,13 +107,13 @@ export const FoldingCube = () => (
 );
 
 export const HeartBeat = () => (
-    <svg className="heart-beat" fill="currentColor" viewBox="0 0 24 24">
+    <svg className="wui-pulse-heart" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
     </svg>
 );
 
 export const ClockLoader = () => (
-    <svg className="clock-loader" viewBox="0 0 100 100">
+    <svg className="wui-pulse-clock" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" />
         <line x1="50" y1="50" x2="50" y2="25" stroke="currentColor" strokeWidth="6" strokeLinecap="round" className="hand minute" />
         <line x1="50" y1="50" x2="75" y2="50" stroke="currentColor" strokeWidth="4" strokeLinecap="round" className="hand hour" />
@@ -121,13 +121,13 @@ export const ClockLoader = () => (
 );
 
 export const Hourglass = () => (
-    <svg className="hourglass-loader" viewBox="0 0 24 24">
+    <svg className="wui-pulse-glass" viewBox="0 0 24 24">
         <path fill="currentColor" d="M6 2v6h.01L12 12l5.99-4H18V2H6zm0 20h12v-6h-.01L12 12l-5.99 4H6v6z" />
     </svg>
 );
 
 export const TwelveDotsScaleRotate = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g>
                 <circle cx="12" cy="3" r="1">
@@ -173,7 +173,7 @@ export const TwelveDotsScaleRotate = () => (
 );
 
 export const Ring180WithBG = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"></path>
             <path d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
@@ -184,7 +184,7 @@ export const Ring180WithBG = () => (
 );
 
 export const Ring180 = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
                 <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"></animateTransform>
@@ -194,7 +194,7 @@ export const Ring180 = () => (
 );
 
 export const Ring270WithBG = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"></path>
             <path d="M10.72,19.9a8,8,0,0,1-6.5-9.79A7.77,7.77,0,0,1,10.4,4.16a8,8,0,0,1,9.49,6.52A1.54,1.54,0,0,0,21.38,12h.13a1.37,1.37,0,0,0,1.38-1.54,11,11,0,1,0-12.7,12.39A1.54,1.54,0,0,0,12,21.34h0A1.47,1.47,0,0,0,10.72,19.9Z">
@@ -205,7 +205,7 @@ export const Ring270WithBG = () => (
 );
 
 export const Ring270 = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M10.72,19.9a8,8,0,0,1-6.5-9.79A7.77,7.77,0,0,1,10.4,4.16a8,8,0,0,1,9.49,6.52A1.54,1.54,0,0,0,21.38,12h.13a1.37,1.37,0,0,0,1.38-1.54,11,11,0,1,0-12.7,12.39A1.54,1.54,0,0,0,12,21.34h0A1.47,1.47,0,0,0,10.72,19.9Z">
                 <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"></animateTransform>
@@ -215,7 +215,7 @@ export const Ring270 = () => (
 );
 
 export const ThreeDotsBounceSMIL = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4" cy="12" r="3">
                 <animate id="spinner_qFRN" begin="0;spinner_OcgL.end+0.25s" attributeName="cy" calcMode="spline" dur="0.6s" values="12;6;12" keySplines=".33,.66,.66,1;.33,0,.66,.33" repeatCount="indefinite"></animate>
@@ -231,7 +231,7 @@ export const ThreeDotsBounceSMIL = () => (
 );
 
 export const ThreeDotsFadeSMIL = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4" cy="12" r="3" opacity="1">
                 <animate id="spinner_qYjJ" begin="0;spinner_t4KZ.end-0.25s" attributeName="opacity" dur="0.75s" values="1;.2" fill="freeze" repeatCount="indefinite"></animate>
@@ -247,7 +247,7 @@ export const ThreeDotsFadeSMIL = () => (
 );
 
 export const InfiniteDotsMove = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4" cy="12" r="0">
                 <animate begin="0;spinner_z0Or.end" attributeName="r" calcMode="spline" dur="0.5s" keySplines=".36,.6,.31,1" values="0;3" fill="freeze" repeatCount="indefinite"></animate>
@@ -282,7 +282,7 @@ export const InfiniteDotsMove = () => (
 );
 
 export const RotatingDotsPair = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="3"></circle>
             <g>
@@ -295,7 +295,7 @@ export const RotatingDotsPair = () => (
 );
 
 export const BouncingDotsTrio = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4" cy="12" r="1.5"><animate attributeName="r" dur="0.75s" values="1.5;3;1.5" repeatCount="indefinite"></animate></circle>
             <circle cx="12" cy="12" r="3"><animate attributeName="r" dur="0.75s" values="3;1.5;3" repeatCount="indefinite"></animate></circle>
@@ -305,7 +305,7 @@ export const BouncingDotsTrio = () => (
 );
 
 export const ScalingDotsTrio = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="4" cy="12" r="3"><animate id="spinner_jObz" begin="0;spinner_vwSQ.end-0.25s" attributeName="r" dur="0.75s" values="3;.2;3" repeatCount="indefinite"></animate></circle>
             <circle cx="12" cy="12" r="3"><animate begin="spinner_jObz.end-0.6s" attributeName="r" dur="0.75s" values="3;.2;3" repeatCount="indefinite"></animate></circle>
@@ -315,7 +315,7 @@ export const ScalingDotsTrio = () => (
 );
 
 export const BlocksWave = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="7.33" height="7.33">
                 <animate id="spinner_oJFS" begin="0;spinner_5T1J.end+0.2s" attributeName="x" dur="0.6s" values="1;4;1" repeatCount="indefinite"></animate>
@@ -376,7 +376,7 @@ export const BlocksWave = () => (
 );
 
 export const BouncingBall = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="12" cy="5" rx="4" ry="4">
                 <animate id="spinner_jbYs" begin="0;spinner_JZdr.end" attributeName="cy" calcMode="spline" dur="0.375s" values="5;20" keySplines=".33,0,.66,.33" fill="freeze" repeatCount="indefinite"></animate>
@@ -390,7 +390,7 @@ export const BouncingBall = () => (
 );
 
 export const TailSpinExact = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12,23a9.63,9.63,0,0,1-8-9.5,9.51,9.51,0,0,1,6.79-9.1A1.66,1.66,0,0,0,12,2.81h0a1.67,1.67,0,0,0-1.94-1.64A11,11,0,0,0,12,23Z">
                 <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"></animateTransform>
@@ -400,7 +400,7 @@ export const TailSpinExact = () => (
 );
 
 export const LinearSpinExact = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#ea580c">
             <defs>
                 <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
@@ -424,7 +424,7 @@ export const LinearSpinExact = () => (
 );
 
 export const BlocksShuffle = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="4" width="6" height="6" rx="1">
                 <animate id="spinner_w36s" begin="0;spinner_5GfT.end-0.25s" attributeName="x" dur="0.75s" values="4;14;4" repeatCount="indefinite"></animate>
@@ -447,7 +447,7 @@ export const BlocksShuffle = () => (
 );
 
 export const LineWave = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="6" width="2.8" height="12" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" begin="0.1"></animate></rect>
             <rect x="6" y="6" width="2.8" height="12" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" begin="0.2"></animate></rect>
@@ -459,7 +459,7 @@ export const LineWave = () => (
 );
 
 export const PulsingGrid = () => (
-    <div className="pulsing-grid-container">
+    <div className="wui-pulse-grid-bay">
         <div className="pulsing-grid">
             <div className="pulse-cell" style={{ animationDelay: "-0.8s" }}></div>
             <div className="pulse-cell" style={{ animationDelay: "-0.6s" }}></div>
@@ -475,7 +475,7 @@ export const PulsingGrid = () => (
 );
 
 export const WifiSignal = () => (
-    <div className="smil-loader">
+    <div className="wui-pulse-smil">
         <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12,21L15.6,16.2C14.6,15.45 13.35,15 12,15C10.65,15 9.4,15.45 8.4,16.2L12,21" opacity="1"></path>
             <path d="M12,9C9.3,9 6.81,9.89 4.8,11.4L6.6,13.8C8.1,12.67 9.97,12 12,12C14.03,12 15.9,12.67 17.4,13.8L19.2,11.4C17.19,9.89 14.7,9 12,9Z" opacity="0.3">
@@ -489,13 +489,13 @@ export const WifiSignal = () => (
 );
 
 export const TadpoleSpinBatch4 = () => (
-    <svg className="classic-spin" viewBox="0 0 24 24" fill="currentColor">
+    <svg className="wui-pulse-classic" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12,23a9.63,9.63,0,0,1-8-9.5,9.51,9.51,0,0,1,6.79-9.1A1.66,1.66,0,0,0,12,2.81h0a1.67,1.67,0,0,0-1.94-1.64A11,11,0,0,0,12,23Z" />
     </svg>
 );
 
 export const RipplePings = () => (
-    <div className="ripple-pings">
+    <div className="wui-pulse-ripples">
         <div className="ping-outer"></div>
         <div className="ping-inner"></div>
         <div className="ping-core"></div>
@@ -503,7 +503,7 @@ export const RipplePings = () => (
 );
 
 export const SquareChase = () => (
-    <div className="square-chase">
+    <div className="wui-pulse-chase">
         <div className="chase-square" style={{ top: 0, left: 0, animationDelay: "-0.8s" }}></div>
         <div className="chase-square" style={{ top: 0, right: 0, animationDelay: "-0.6s" }}></div>
         <div className="chase-square" style={{ bottom: 0, right: 0, animationDelay: "-0.4s" }}></div>
@@ -512,7 +512,7 @@ export const SquareChase = () => (
 );
 
 export const ClockwiseFade = () => (
-    <svg className="classic-spin" viewBox="0 0 24 24" fill="currentColor">
+    <svg className="wui-pulse-classic" viewBox="0 0 24 24" fill="currentColor">
         <rect x="11" y="1" width="2" height="5" opacity="1" />
         <rect x="11" y="1" width="2" height="5" transform="rotate(30 12 12)" opacity="0.9" />
         <rect x="11" y="1" width="2" height="5" transform="rotate(60 12 12)" opacity="0.8" />
@@ -529,7 +529,7 @@ export const ClockwiseFade = () => (
 );
 
 export const BouncingDotsBatch4 = () => (
-    <div className="flex-bounce-dots">
+    <div className="wui-pulse-flex">
         <span style={{ animationDelay: "-0.3s" }}></span>
         <span style={{ animationDelay: "-0.15s" }}></span>
         <span></span>
@@ -537,7 +537,7 @@ export const BouncingDotsBatch4 = () => (
 );
 
 export const FlowerSpin = () => (
-    <div className="flower-spin-container">
+    <div className="wui-pulse-flower">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
             <path className="flower-path" d="M20.27,4.74a4.93,4.93,0,0,1,1.52,4.61,5.32,5.32,0,0,1-4.1,4.51,5.12,5.12,0,0,1-5.2-1.5,5.53,5.53,0,0,0,6.13-1.48A5.66,5.66,0,0,0,20.27,4.74ZM12.32,11.53a5.49,5.49,0,0,0-1.47-6.2A5.57,5.57,0,0,0,4.71,3.72,5.17,5.17,0,0,1,9.53,2.2,5.52,5.52,0,0,1,13.9,6.45,5.28,5.28,0,0,1,12.32,11.53ZM19.2,20.29a4.92,4.92,0,0,1-4.72,1.49,5.32,5.32,0,0,1-4.34-4.05A5.2,5.2,0,0,1,11.6,12.5a5.6,5.6,0,0,0,1.51,6.13A5.63,5.63,0,0,0,19.2,20.29ZM3.79,19.38A5.18,5.18,0,0,1,2.32,14a5.3,5.3,0,0,1,4.59-4,5,5,0,0,1,4.58,1.61,5.55,5.55,0,0,0-6.32,1.69A5.46,5.46,0,0,0,3.79,19.38ZM12.23,12a5.11,5.11,0,0,0,3.66-5,5.75,5.75,0,0,0-3.18-6,5,5,0,0,1,4.42,2.3,5.21,5.21,0,0,1,.24,5.92A5.4,5.4,0,0,1,12.23,12ZM11.76,12a5.18,5.18,0,0,0-3.68,5.09,5.58,5.58,0,0,0,3.19,5.79c-1,.35-2.9-.46-4-1.68A5.51,5.51,0,0,1,11.76,12ZM23,12.63a5.07,5.07,0,0,1-2.35,4.52,5.23,5.23,0,0,1-5.91.2,5.24,5.24,0,0,1-2.67-4.77,5.51,5.51,0,0,0,5.45,3.33A5.52,5.52,0,0,0,23,12.63ZM1,11.23a5,5,0,0,1,2.49-4.5,5.23,5.23,0,0,1,5.81-.06,5.3,5.3,0,0,1,2.61,4.74A5.56,5.56,0,0,0,6.56,8.06,5.71,5.71,0,0,0,1,11.23Z" />
         </svg>
@@ -545,22 +545,22 @@ export const FlowerSpin = () => (
 );
 
 export const HamsterLoader = () => (
-    <div className="wheel-and-hamster" aria-label="Orange and tan hamster running in a metal wheel" role="img">
-        <div className="wheel" />
-        <div className="hamster">
-            <div className="hamster__body">
-                <div className="hamster__head">
-                    <div className="hamster__ear" />
-                    <div className="hamster__eye" />
-                    <div className="hamster__nose" />
+    <div className="wui-pulse-hamster" aria-label="Orange and tan hamster running in a metal wheel" role="img">
+        <div className="wui-pulse-hamster-wheel" />
+        <div className="wui-pulse-hamster-pet">
+            <div className="wui-pulse-hamster-body">
+                <div className="wui-pulse-hamster-head">
+                    <div className="wui-pulse-hamster-ear" />
+                    <div className="wui-pulse-hamster-eye" />
+                    <div className="wui-pulse-hamster-nose" />
                 </div>
-                <div className="hamster__limb hamster__limb--fr" />
-                <div className="hamster__limb hamster__limb--fl" />
-                <div className="hamster__limb hamster__limb--br" />
-                <div className="hamster__limb hamster__limb--bl" />
-                <div className="hamster__tail" />
+                <div className="wui-pulse-hamster-limb wui-pulse-hamster-limb--fr" />
+                <div className="wui-pulse-hamster-limb wui-pulse-hamster-limb--fl" />
+                <div className="wui-pulse-hamster-limb wui-pulse-hamster-limb--br" />
+                <div className="wui-pulse-hamster-limb wui-pulse-hamster-limb--bl" />
+                <div className="wui-pulse-hamster-tail" />
             </div>
         </div>
-        <div className="spoke" />
+        <div className="wui-pulse-hamster-spoke" />
     </div>
 );

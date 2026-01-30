@@ -17,13 +17,13 @@ const Textarea = ({
   const [isFocused, setIsFocused] = useState(false)
 
   return (
-    <div className={`textarea-wrapper ${className}`}>
+    <div className={`wui-portal-bay ${className}`}>
       {label && (
-        <label className={`textarea-label ${required ? 'required' : ''}`}>
+        <label className={`wui-portal-herald ${required ? 'required' : ''}`}>
           {label}
         </label>
       )}
-      <div className={`textarea-container ${isFocused ? 'focused' : ''} ${error ? 'error' : ''}`}>
+      <div className={`wui-portal-well ${isFocused ? 'focused' : ''} ${error ? 'error' : ''}`}>
         <textarea
           placeholder={placeholder}
           value={value}
@@ -33,16 +33,16 @@ const Textarea = ({
           disabled={disabled}
           rows={rows}
           maxLength={maxLength}
-          className="textarea-field"
+          className="wui-portal-field"
           {...props}
         />
         {maxLength && (
-          <span className="textarea-counter">
+          <span className="wui-portal-orbit">
             {value?.length || 0} / {maxLength}
           </span>
         )}
       </div>
-      {error && <span className="textarea-error">{error}</span>}
+      {error && <span className="wui-portal-clash">{error}</span>}
     </div>
   )
 }

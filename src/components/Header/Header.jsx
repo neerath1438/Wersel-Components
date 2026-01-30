@@ -3,9 +3,9 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <header className="header">
-      <div className="header-container">
-        <Link to="/" className="logo">
+    <header className="wui-apex">
+      <div className="wui-apex-orbit">
+        <Link to="/" className="wui-crown">
           Wersel Components
         </Link>
       </div>

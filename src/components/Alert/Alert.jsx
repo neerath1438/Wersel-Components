@@ -16,16 +16,16 @@ const Alert = ({
   }
 
   return (
-    <div className={`alert alert-${type} ${className}`}>
-      <div className="alert-content">
-        {showIcon && <span className="alert-icon">{icons[type]}</span>}
-        <div className="alert-text">
-          {title && <div className="alert-title">{title}</div>}
-          {message && <div className="alert-message">{message}</div>}
+    <div className={`wui-signal wui-signal-${type} ${className}`}>
+      <div className="wui-signal-orbit">
+        {showIcon && <span className="wui-signal-atom">{icons[type]}</span>}
+        <div className="wui-signal-core">
+          {title && <div className="wui-signal-crown">{title}</div>}
+          {message && <div className="wui-signal-voice">{message}</div>}
         </div>
       </div>
       {onClose && (
-        <button className="alert-close" onClick={onClose}>
+        <button className="wui-signal-exit" onClick={onClose}>
           ×
         </button>
       )}

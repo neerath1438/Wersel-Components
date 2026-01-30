@@ -1,4 +1,4 @@
-.radio-wrapper {
+.wui-choice-field {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -6,18 +6,18 @@
   margin-bottom: 0.5rem;
 }
 
-.radio-wrapper.disabled {
+.wui-choice-field.disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.radio-input {
+.wui-choice {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.radio-custom {
+.wui-choice-gem {
   width: 20px;
   height: 20px;
   border: 2px solid #ddd;
@@ -28,15 +28,15 @@
   flex-shrink: 0;
 }
 
-.radio-wrapper:hover:not(.disabled) .radio-custom {
+.wui-choice-field:hover:not(.disabled) .wui-choice-gem {
   border-color: #3498db;
 }
 
-.radio-input:checked ~ .radio-custom {
+.wui-choice:checked~.wui-choice-gem {
   border-color: #3498db;
 }
 
-.radio-input:checked ~ .radio-custom::after {
+.wui-choice:checked~.wui-choice-gem::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -48,12 +48,11 @@
   background-color: #3498db;
 }
 
-.radio-input:focus ~ .radio-custom {
+.wui-choice:focus~.wui-choice-gem {
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
-.radio-label {
+.wui-choice-voice {
   color: #2c3e50;
   font-size: 1rem;
 }
-

@@ -158,3 +158,9 @@ export { default as ExpandingMenu } from './ExpandingMenu/ExpandingMenu'
 // Job Card Component
 export { default as JobCard } from './JobCard/JobCard'
 
+// Code Profile Component
+export { default as CodeProfile } from './CodeProfile/CodeProfile'
+
+// Code Area Component
+export { default as CodeArea } from './CodeArea/CodeArea'
+

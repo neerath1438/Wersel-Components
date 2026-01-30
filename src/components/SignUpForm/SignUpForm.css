@@ -1,4 +1,4 @@
-.signup-wrapper {
+.wui-chamber-bay {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,7 +6,7 @@
     font-family: sans-serif;
 }
 
-.signup-container {
+.wui-chamber-well {
     width: 100%;
     max-width: 28rem;
     background: white;
@@ -17,15 +17,15 @@
 }
 
 /* Form */
-.signup-form {
+.wui-chamber-core {
     margin-bottom: 1.5rem;
 }
 
-.signup-field {
+.wui-chamber-field {
     margin-bottom: 1.5rem;
 }
 
-.signup-label {
+.wui-chamber-intent {
     display: block;
     font-size: 0.875rem;
     font-weight: 500;
@@ -33,11 +33,11 @@
     margin-bottom: 0.5rem;
 }
 
-.signup-input-wrapper {
+.wui-chamber-portal-wrapper {
     position: relative;
 }
 
-.signup-input-icon {
+.wui-portal-atom {
     position: absolute;
     top: 50%;
     left: 0.75rem;
@@ -48,7 +48,7 @@
     align-items: center;
 }
 
-.signup-input {
+.wui-portal-field {
     display: flex;
     width: 100%;
     height: 2.5rem;
@@ -61,20 +61,20 @@
     transition: all 0.2s;
 }
 
-.signup-input::placeholder {
+.wui-portal-field::placeholder {
     color: #6b7280;
 }
 
-.signup-input:focus {
+.wui-portal-field:focus {
     outline: none;
     box-shadow: 0 0 0 2px white, 0 0 0 4px #111827;
 }
 
-.signup-password {
+.wui-portal-password {
     padding-right: 2.5rem;
 }
 
-.signup-password-toggle {
+.wui-portal-eye {
     position: absolute;
     top: 50%;
     right: 0.75rem;
@@ -89,19 +89,19 @@
     transition: color 0.2s;
 }
 
-.signup-password-toggle:hover {
+.wui-portal-eye:hover {
     color: #6b7280;
 }
 
 /* Terms */
-.signup-terms {
+.wui-chamber-rift {
     display: flex;
     align-items: start;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
 }
 
-.signup-checkbox {
+.wui-gem-check {
     width: 1rem;
     height: 1rem;
     border: 1px solid #d1d5db;
@@ -111,13 +111,13 @@
     flex-shrink: 0;
 }
 
-.signup-terms-label {
+.wui-chamber-note {
     font-size: 0.875rem;
     color: #6b7280;
     line-height: 1.25rem;
 }
 
-.signup-link {
+.wui-chamber-path {
     font-weight: 500;
     color: #111827;
     text-decoration: underline;
@@ -125,12 +125,12 @@
     transition: text-decoration 0.2s;
 }
 
-.signup-link:hover {
+.wui-chamber-path:hover {
     text-decoration: none;
 }
 
 /* Submit Button */
-.signup-submit-btn {
+.wui-trigger-prime {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -147,29 +147,29 @@
     transition: all 0.2s;
 }
 
-.signup-submit-btn:hover {
+.wui-trigger-prime:hover {
     background: rgba(17, 24, 39, 0.9);
 }
 
-.signup-submit-btn:focus-visible {
+.wui-trigger-prime:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px white, 0 0 0 4px #111827;
 }
 
 /* Divider */
-.signup-divider {
+.wui-chamber-break {
     position: relative;
     display: flex;
     align-items: center;
     margin: 1.5rem 0;
 }
 
-.signup-divider-line {
+.wui-chamber-streak {
     flex: 1;
     border-top: 1px solid #e5e7eb;
 }
 
-.signup-divider-text {
+.wui-chamber-dial {
     padding: 0 0.5rem;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -178,14 +178,14 @@
 }
 
 /* Social Buttons */
-.signup-social-buttons {
+.wui-chamber-stack {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.signup-social-btn {
+.wui-chamber-trigger {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -201,31 +201,31 @@
     transition: all 0.2s;
 }
 
-.signup-social-btn:hover {
+.wui-chamber-trigger:hover {
     background: #f9fafb;
 }
 
-.signup-social-btn:focus-visible {
+.wui-chamber-trigger:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px white, 0 0 0 4px #111827;
 }
 
-.signup-social-btn span {
+.wui-chamber-trigger span {
     margin-left: 0.5rem;
 }
 
 /* Footer */
-.signup-footer {
+.wui-chamber-base {
     text-align: center;
 }
 
-.signup-footer-text {
+.wui-chamber-note {
     font-size: 0.875rem;
     color: #6b7280;
     margin: 0;
 }
 
-.signup-footer-link {
+.wui-chamber-path {
     font-weight: 500;
     color: #111827;
     text-decoration: underline;
@@ -233,100 +233,96 @@
     transition: text-decoration 0.2s;
 }
 
-.signup-footer-link:hover {
+.wui-chamber-path:hover {
     text-decoration: none;
 }
 
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-    .signup-container {
+    .wui-chamber-well {
         background: #000000;
         border-color: #1f2937;
     }
 
-    .signup-label {
+    .wui-chamber-intent {
         color: #f9fafb;
     }
 
-    .signup-input-icon {
+    .wui-portal-atom {
         color: #6b7280;
     }
 
-    .signup-input {
+    .wui-portal-field {
         background: #000000;
         border-color: #1f2937;
         color: #f9fafb;
     }
 
-    .signup-input::placeholder {
+    .wui-portal-field::placeholder {
         color: #9ca3af;
     }
 
-    .signup-input:focus {
+    .wui-portal-field:focus {
         box-shadow: 0 0 0 2px #000000, 0 0 0 4px #d1d5db;
     }
 
-    .signup-password-toggle {
+    .wui-portal-eye {
         color: #6b7280;
     }
 
-    .signup-password-toggle:hover {
+    .wui-portal-eye:hover {
         color: #d1d5db;
     }
 
-    .signup-checkbox {
+    .wui-gem-check {
         border-color: #374151;
     }
 
-    .signup-terms-label {
+    .wui-chamber-note {
         color: #9ca3af;
     }
 
-    .signup-link {
+    .wui-chamber-path {
         color: #f9fafb;
     }
 
-    .signup-submit-btn {
+    .wui-trigger-prime {
         background: #fafafa;
         color: #111827;
     }
 
-    .signup-submit-btn:hover {
+    .wui-trigger-prime:hover {
         background: rgba(250, 250, 250, 0.9);
     }
 
-    .signup-submit-btn:focus-visible {
+    .wui-trigger-prime:focus-visible {
         box-shadow: 0 0 0 2px #000000, 0 0 0 4px #d1d5db;
     }
 
-    .signup-divider-line {
+    .wui-chamber-streak {
         border-color: #1f2937;
     }
 
-    .signup-divider-text {
+    .wui-chamber-dial {
         background: #000000;
         color: #9ca3af;
     }
 
-    .signup-social-btn {
+    .wui-chamber-trigger {
         background: #000000;
         border-color: #1f2937;
         color: #f9fafb;
     }
 
-    .signup-social-btn:hover {
+    .wui-chamber-trigger:hover {
         background: #0f172a;
     }
 
-    .signup-social-btn:focus-visible {
+    .wui-chamber-trigger:focus-visible {
         box-shadow: 0 0 0 2px #000000, 0 0 0 4px #d1d5db;
     }
 
-    .signup-footer-text {
-        color: #9ca3af;
-    }
-
-    .signup-footer-link {
+    .wui-chamber-path {
         color: #f9fafb;
     }
 }

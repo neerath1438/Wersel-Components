@@ -1,4 +1,4 @@
-.card {
+.wui-frame {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -6,13 +6,12 @@
   margin-bottom: 1rem;
 }
 
-.card-title {
+.wui-frame-crown {
   margin-bottom: 1rem;
   color: #2c3e50;
   font-size: 1.25rem;
 }
 
-.card-content {
+.wui-frame-core {
   color: #555;
 }
-

@@ -1,4 +1,4 @@
-.header {
+.wui-apex {
   background-color: #000000;
   border-bottom: 1px solid #262626;
   padding: 1rem 2rem;
@@ -7,7 +7,7 @@
   z-index: 1000;
 }
 
-.header-container {
+.wui-apex-orbit {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.logo {
+.wui-crown {
   font-size: 1.5rem;
   font-weight: 700;
   color: #FAFAFA;
@@ -25,7 +25,7 @@
   transition: opacity 0.3s ease;
 }
 
-.logo:hover {
+.wui-crown:hover {
   opacity: 1;
 }
 

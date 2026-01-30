@@ -16,13 +16,13 @@ const Input = ({
   const [isFocused, setIsFocused] = useState(false)
 
   return (
-    <div className={`input-wrapper ${className}`}>
+    <div className={`wui-portal-bay ${className}`}>
       {label && (
-        <label className={`input-label ${required ? 'required' : ''}`}>
+        <label className={`wui-portal-herald ${required ? 'required' : ''}`}>
           {label}
         </label>
       )}
-      <div className={`input-container ${isFocused ? 'focused' : ''} ${error ? 'error' : ''}`}>
+      <div className={`wui-portal-field ${isFocused ? 'focused' : ''} ${error ? 'error' : ''}`}>
         <input
           type={type}
           placeholder={placeholder}
@@ -31,11 +31,11 @@ const Input = ({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           disabled={disabled}
-          className="input-field"
+          className="wui-portal"
           {...props}
         />
       </div>
-      {error && <span className="input-error">{error}</span>}
+      {error && <span className="wui-portal-clash">{error}</span>}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-.theme-switch {
+.wui-glimmer {
     --toggle-size: 30px;
     /* the size is adjusted using font-size,
      this is not transform scale,
@@ -22,10 +22,10 @@
     --circle-transition: .3s cubic-bezier(0, -0.02, 0.35, 1.17);
 }
 
-.theme-switch,
-.theme-switch *,
-.theme-switch *::before,
-.theme-switch *::after {
+.wui-glimmer,
+.wui-glimmer *,
+.wui-glimmer *::before,
+.wui-glimmer *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
@@ -33,7 +33,7 @@
     font-size: var(--toggle-size);
 }
 
-.theme-switch__container {
+.wui-glimmer-deck {
     width: var(--container-width);
     height: var(--container-height);
     background-color: var(--container-light-bg);
@@ -48,7 +48,7 @@
     position: relative;
 }
 
-.theme-switch__container::before {
+.wui-glimmer-deck::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -58,11 +58,11 @@
     border-radius: var(--container-radius)
 }
 
-.theme-switch__checkbox {
+.wui-glimmer-input {
     display: none;
 }
 
-.theme-switch__circle-container {
+.wui-glimmer-orbit {
     width: var(--circle-container-diameter);
     height: var(--circle-container-diameter);
     background-color: rgba(255, 255, 255, 0.1);
@@ -81,7 +81,7 @@
     pointer-events: none;
 }
 
-.theme-switch__sun-moon-container {
+.wui-glimmer-vessel {
     pointer-events: auto;
     position: relative;
     z-index: 2;
@@ -100,7 +100,7 @@
     transition: var(--transition);
 }
 
-.theme-switch__moon {
+.wui-glimmer-shadow {
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);
@@ -116,7 +116,7 @@
     position: relative;
 }
 
-.theme-switch__spot {
+.wui-glimmer-crater {
     position: absolute;
     top: 0.75em;
     left: 0.312em;
@@ -128,21 +128,21 @@
     box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
 }
 
-.theme-switch__spot:nth-of-type(2) {
+.wui-glimmer-crater:nth-of-type(2) {
     width: 0.375em;
     height: 0.375em;
     top: 0.937em;
     left: 1.375em;
 }
 
-.theme-switch__spot:nth-last-of-type(3) {
+.wui-glimmer-crater:nth-last-of-type(3) {
     width: 0.25em;
     height: 0.25em;
     top: 0.312em;
     left: 0.812em;
 }
 
-.theme-switch__clouds {
+.wui-glimmer-fog {
     width: 1.25em;
     height: 1.25em;
     background-color: var(--clouds-color);
@@ -157,7 +157,7 @@
     transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
 }
 
-.theme-switch__stars-container {
+.wui-glimmer-void {
     position: absolute;
     color: var(--stars-color);
     top: -100%;
@@ -171,33 +171,33 @@
 
 /* actions */
 
-.theme-switch__checkbox:checked+.theme-switch__container {
+.wui-glimmer-input:checked+.wui-glimmer-deck {
     background-color: var(--container-night-bg);
 }
 
-.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__circle-container {
+.wui-glimmer-input:checked+.wui-glimmer-deck .wui-glimmer-orbit {
     left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter));
 }
 
-.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__circle-container:hover {
+.wui-glimmer-input:checked+.wui-glimmer-deck .wui-glimmer-orbit:hover {
     left: calc(100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em)
 }
 
-.theme-switch__circle-container:hover {
+.wui-glimmer-orbit:hover {
     left: calc(var(--circle-container-offset) + 0.187em);
 }
 
-.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__moon {
+.wui-glimmer-input:checked+.wui-glimmer-deck .wui-glimmer-shadow {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
 }
 
-.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__clouds {
+.wui-glimmer-input:checked+.wui-glimmer-deck .wui-glimmer-fog {
     bottom: -4.062em;
 }
 
-.theme-switch__checkbox:checked+.theme-switch__container .theme-switch__stars-container {
+.wui-glimmer-input:checked+.wui-glimmer-deck .wui-glimmer-void {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);

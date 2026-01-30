@@ -33,33 +33,33 @@ const Dropdown = ({
   }
 
   return (
-    <div className={`dropdown-wrapper ${className}`} ref={dropdownRef}>
+    <div className={`wui-cascade-bay ${className}`} ref={dropdownRef}>
       {label && (
-        <label className={`dropdown-label ${error ? 'error' : ''}`}>
+        <label className={`wui-cascade-herald ${error ? 'error' : ''}`}>
           {label}
         </label>
       )}
-      <div className={`dropdown-container ${isOpen ? 'open' : ''} ${error ? 'error' : ''} ${disabled ? 'disabled' : ''}`}>
+      <div className={`wui-cascade-well ${isOpen ? 'open' : ''} ${error ? 'error' : ''} ${disabled ? 'disabled' : ''}`}>
         <button
           type="button"
-          className="dropdown-button"
+          className="wui-cascade-trigger"
           onClick={() => !disabled && setIsOpen(!isOpen)}
           disabled={disabled}
         >
           <span className={selectedOption ? 'selected' : 'placeholder'}>
             {selectedOption ? selectedOption.label : placeholder}
           </span>
-          <span className="dropdown-arrow">▼</span>
+          <span className="wui-cascade-dial">▼</span>
         </button>
         {isOpen && (
-          <div className="dropdown-menu">
+          <div className="wui-cascade-orbit">
             {options.length === 0 ? (
-              <div className="dropdown-item disabled">No options available</div>
+              <div className="wui-cascade-atom disabled">No options available</div>
             ) : (
               options.map((option) => (
                 <div
                   key={option.value}
-                  className={`dropdown-item ${value === option.value ? 'selected' : ''}`}
+                  className={`wui-cascade-atom ${value === option.value ? 'selected' : ''}`}
                   onClick={() => handleSelect(option)}
                 >
                   {option.label}
@@ -69,7 +69,7 @@ const Dropdown = ({
           </div>
         )}
       </div>
-      {error && <span className="dropdown-error">{error}</span>}
+      {error && <span className="wui-cascade-clash">{error}</span>}
     </div>
   )
 }
